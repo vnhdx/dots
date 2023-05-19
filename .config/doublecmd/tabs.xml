@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd>
+  <Tabs>
+    <OpenedTabs>
+      <Left>
+        <ActiveTab>2</ActiveTab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/nix/store/3260asc8vnrakiibqqc7qna6b8xxahlh-doublecmd-1.1.24/lib/doublecmd/</Path>
+                  <Path Filename="..">/home/vinh/.config/fcitx5/</Path>
+                  <Path Filename="fcitx5">/home/vinh/.config/</Path>
+                  <Path Filename="projects">/home/vinh/</Path>
+                  <Path Filename="webhook">/home/vinh/projects/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+          <Options>3</Options>
+          <LockPath>/home/vinh/projects/</LockPath>
+          <Title>projects</Title>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/nix/store/3260asc8vnrakiibqqc7qna6b8xxahlh-doublecmd-1.1.24/lib/doublecmd/</Path>
+                  <Path Filename="..">/home/vinh/.config/fcitx5/</Path>
+                  <Path Filename="fcitx5">/home/vinh/.config/</Path>
+                  <Path Filename="projects">/home/vinh/</Path>
+                  <Path Filename="linux-conf">/home/vinh/projects/</Path>
+                  <Path Filename="home">/home/vinh/projects/linux-conf/</Path>
+                  <Path Filename=".config">/home/vinh/projects/linux-conf/home/</Path>
+                  <Path Filename="foot">/home/vinh/projects/linux-conf/home/.config/</Path>
+                  <Path Filename="foot.ini">/home/vinh/projects/linux-conf/home/.config/foot/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/nix/store/3260asc8vnrakiibqqc7qna6b8xxahlh-doublecmd-1.1.24/lib/doublecmd/</Path>
+                  <Path Filename="..">/home/vinh/.config/fcitx5/</Path>
+                  <Path Filename="fcitx5">/home/vinh/.config/</Path>
+                  <Path Filename="projects">/home/vinh/</Path>
+                  <Path Filename="linux-conf">/home/vinh/projects/</Path>
+                  <Path Filename="home">/home/vinh/projects/linux-conf/</Path>
+                  <Path Filename=".config">/home/vinh/projects/linux-conf/home/</Path>
+                  <Path Filename="foot">/home/vinh/projects/linux-conf/home/.config/</Path>
+                  <Path Filename="foot.ini">/home/vinh/projects/linux-conf/home/.config/foot/</Path>
+                  <Path Filename="..">/home/</Path>
+                  <Path Filename="etc">/</Path>
+                  <Path Filename="nix">/etc/</Path>
+                  <Path Filename="..">/etc/nix/</Path>
+                  <Path Filename="nixos">/etc/</Path>
+                  <Path Filename="..">/etc/nixos/</Path>
+                  <Path Filename="..">/etc/</Path>
+                  <Path Filename="etc">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+      </Left>
+      <Right>
+        <ActiveTab>1</ActiveTab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/nix/store/3260asc8vnrakiibqqc7qna6b8xxahlh-doublecmd-1.1.24/lib/doublecmd/</Path>
+                  <Path Filename="..">/nix/store/3260asc8vnrakiibqqc7qna6b8xxahlh-doublecmd-1.1.24/lib/</Path>
+                  <Path Filename="..">/nix/store/3260asc8vnrakiibqqc7qna6b8xxahlh-doublecmd-1.1.24/</Path>
+                  <Path Filename="..">/nix/store/</Path>
+                  <Path Filename="..">/nix/</Path>
+                  <Path Filename="home">/</Path>
+                  <Path Filename="vinh">/home/</Path>
+                  <Path Filename=".config">/home/vinh/</Path>
+                  <Path Filename="foot">/home/vinh/.config/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+          <Options>3</Options>
+          <LockPath>/home/vinh/.config/</LockPath>
+          <Title>.config</Title>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/nix/store/3260asc8vnrakiibqqc7qna6b8xxahlh-doublecmd-1.1.24/lib/doublecmd/</Path>
+                  <Path Filename="..">/nix/store/3260asc8vnrakiibqqc7qna6b8xxahlh-doublecmd-1.1.24/lib/</Path>
+                  <Path Filename="..">/nix/store/3260asc8vnrakiibqqc7qna6b8xxahlh-doublecmd-1.1.24/</Path>
+                  <Path Filename="..">/nix/store/</Path>
+                  <Path Filename="..">/nix/</Path>
+                  <Path Filename="home">/</Path>
+                  <Path Filename="vinh">/home/</Path>
+                  <Path Filename=".config">/home/vinh/</Path>
+                  <Path Filename="foot">/home/vinh/.config/</Path>
+                  <Path Filename="themes">/home/vinh/.config/foot/</Path>
+                  <Path Filename="..">/home/vinh/.config/foot/themes/</Path>
+                  <Path Filename="foot.ini">/home/vinh/.config/foot/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+      </Right>
+    </OpenedTabs>
+  </Tabs>
+</doublecmd>

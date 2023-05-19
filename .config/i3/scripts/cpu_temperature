@@ -1,0 +1,14 @@
+#!/bin/sh
+
+temperate=$(cat /sys/class/thermal/thermal_zone*/temp | sort -n | tail -1)
+temperate=$((temperate / 1000))
+
+color="#FFFFFF"
+
+if [ ${temperate} -gt 55 ]; then
+	color="#FFFF00"
+elif [ ${temperate} -gt 65 ]; then
+	color="#FF0000"
+fi
+
+printf " %i°C\n\n%s\n" ${temperate} ${color}

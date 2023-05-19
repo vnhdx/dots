@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd>
+  <History>
+    <Navigation>
+      <Item>/</Item>
+      <Item>/etc/</Item>
+      <Item>/etc/nixos/</Item>
+      <Item>/etc/nix/</Item>
+      <Item>/home/</Item>
+      <Item>/home/vinh/.config/foot/</Item>
+      <Item>/home/vinh/.config/foot/themes/</Item>
+      <Item>/home/vinh/projects/linux-conf/home/.config/foot/</Item>
+      <Item>/home/vinh/projects/linux-conf/home/.config/</Item>
+      <Item>/home/vinh/projects/linux-conf/home/</Item>
+      <Item>/home/vinh/projects/</Item>
+      <Item>/home/vinh/</Item>
+      <Item>/home/vinh/.config/</Item>
+      <Item>/nix/</Item>
+      <Item>/nix/store/</Item>
+      <Item>/nix/store/3260asc8vnrakiibqqc7qna6b8xxahlh-doublecmd-1.1.24/</Item>
+      <Item>/nix/store/3260asc8vnrakiibqqc7qna6b8xxahlh-doublecmd-1.1.24/lib/</Item>
+      <Item>/home/vinh/.config/fcitx5/</Item>
+    </Navigation>
+    <CommandLine/>
+    <FileMask/>
+    <VolumeSize/>
+    <CreateDirectories/>
+    <SearchText/>
+    <SearchTextPath/>
+    <ReplaceText/>
+    <ReplaceTextPath/>
+    <RenameNameMask/>
+    <RenameExtMask/>
+    <SearchDirectories/>
+    <SearchExcludeFiles/>
+    <SearchExcludeDirectories/>
+  </History>
+</doublecmd>

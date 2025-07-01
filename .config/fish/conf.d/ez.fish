@@ -114,8 +114,13 @@ function k -d kubectl
     kubectl $argv
 end
 
-function lg -d lazygit
+function l -d lazygit
     lazygit $argv
+end
+
+
+function m -d mise
+    mise $argv
 end
 
 function n -d neofetch

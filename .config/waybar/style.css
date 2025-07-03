@@ -1,37 +1,37 @@
 @import "themes/mocha.css";
 
 * {
-    font-family: FantasqueSansMono Nerd Font;
-    font-size: 12px;
-    min-height: 0;
+	font-family: FantasqueSansMono Nerd Font;
+	font-size: 12px;
+	min-height: 0;
 }
 
 #waybar {
-    background: transparent;
-    color: @text;
-    margin: 5px 5px;
+	background: transparent;
+	color: @text;
+	margin: 5px 5px;
 }
 
 #workspaces {
-    border-radius: 1rem;
-    margin: 5px;
-    background-color: @surface0;
-    margin-left: 1rem;
+	border-radius: 1rem;
+	margin: 5px;
+	background-color: @surface0;
+	margin-left: 1rem;
 }
 
 #workspaces button {
-    color: @lavender;
-    border-radius: 1rem;
+	color: @lavender;
+	border-radius: 1rem;
 }
 
 #workspaces button.active {
-    color: @sky;
-    border-radius: 1rem;
+	color: @sky;
+	border-radius: 1rem;
 }
 
 #workspaces button:hover {
-    color: @sapphire;
-    border-radius: 1rem;
+	color: @sapphire;
+	border-radius: 1rem;
 }
 
 #custom-music,
@@ -40,6 +40,7 @@
 #cpu,
 #memory,
 #clock,
+#network,
 #battery,
 #temperature,
 #pulseaudio,
@@ -48,84 +49,84 @@
 #cava,
 #power-profiles-daemon,
 #custom-power {
-    background-color: @surface0;
-    padding: 0.5rem 1rem;
-    margin: 5px 0;
+	background-color: @surface0;
+	padding: 0.5rem 1rem;
+	margin: 5px 0;
 }
 
 #cpu {
-    border-radius: 1rem 0px 0px 1rem;
-    color: @pink;
+	border-radius: 1rem 0px 0px 1rem;
+	color: @pink;
 }
 
 #temperature {
-    color: @orange;
+	color: @orange;
 }
 
 #clock {
-    color: @blue;
-    border-radius: 0px 1rem 1rem 0px;
-    margin-right: 1rem;
+	color: @blue;
+	border-radius: 0px 1rem 1rem 0px;
+	margin-right: 1rem;
 }
 
 #power-profiles-daemon,
 #battery {
-    color: @green;
+	color: @green;
 }
 
 #battery.charging {
-    color: @green;
+	color: @green;
 }
 
 #battery.warning:not(.charging) {
-    color: @red;
+	color: @red;
 }
 
 #backlight {
-    color: @yellow;
+	color: @yellow;
 }
 
 #backlight,
 #power-profiles-daemon,
 #battery {
-    border-radius: 0;
+	border-radius: 0;
 }
 
 #pulseaudio {
-    color: @maroon;
-    margin-left: 0;
-    padding-left: 5px;
+	color: @maroon;
+	margin-left: 0;
+	padding-left: 5px;
 }
 
 #cava {
-    color: @pink;
-    border-radius: 1rem 0px 0px 1rem;
-    margin-left: 1rem;
-    margin-right: 0;
-    padding-right: 0;
+	color: @pink;
+	border-radius: 1rem 0px 0px 1rem;
+	margin-left: 1rem;
+	margin-right: 0;
+	padding-right: 0;
 }
 
 #custom-music {
-    color: @mauve;
-    border-radius: 1rem;
+	color: @mauve;
+	border-radius: 1rem;
 }
 
 #language {
-    border-radius: 1rem 0px 0px 1rem;
-    color: @lavender;
+	border-radius: 1rem 0px 0px 1rem;
+	color: @lavender;
 }
 
 #custom-power {
-    margin-right: 1rem;
-    border-radius: 0px 1rem 1rem 0px;
-    color: @red;
+	margin-right: 1rem;
+	border-radius: 0px 1rem 1rem 0px;
+	color: @red;
 }
 
 #tray {
-    /* margin-right: 1rem; */
-    border-radius: 1rem 0px 0px 1rem;
+	/* margin-right: 1rem; */
+	border-radius: 1rem 0px 0px 1rem;
 }
 
 #workspaces button.urgent {
-    color: @red;
+	color: @red;
 }

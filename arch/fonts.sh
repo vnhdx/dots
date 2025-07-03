@@ -9,4 +9,7 @@ pkgs=(
   ttf-opensans
 )
 
-. ./_pkg.sh
+source ./_yay.sh
+source ../bin/_main.sh
+
+main "$@"

@@ -14,7 +14,7 @@ pkgs=(
   # android-sdk-cmdline-tools-latest
 )
 
-setup() {
+_install() {
   # Flutter
   mise i flutter
   # flutter doctor --android-licenses
@@ -25,9 +25,8 @@ setup() {
   # Android SDK
   mise i android-sdk
   sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
-}
 
-env(){
+  # Environment
   cat <<EOF >> ~/.bashrc
 
 # Flutter
@@ -36,7 +35,7 @@ export CHROME_EXECUTABLE=/usr/bin/firefox
 EOF
 }
 
-. ./_pkg.sh
+source ./_yay.sh
+source ../bin/_main.sh
 
-setup
-env
+main "$@"

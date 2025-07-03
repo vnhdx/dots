@@ -20,7 +20,11 @@ function c -d 'xclip to clipboard'
     xclip -selection clipboard $argv
 end
 
-function f -d 'fzf: find files'
+function f -d fastfetch
+    fastfetch $argv
+end
+
+function ff -d 'fzf: find files'
     fzf \
         --preview \
         'bat --style=numbers --color=always --line-range :500 {}' \
@@ -118,13 +122,8 @@ function l -d lazygit
     lazygit $argv
 end
 
-
 function m -d mise
     mise $argv
-end
-
-function n -d neofetch
-    neofetch $argv
 end
 
 function osx -d 'Launch OSX_KVM'

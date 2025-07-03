@@ -4,8 +4,8 @@
   environment.systemPackages = with pkgs; [
     htop
     btop
-    neofetch
-    tldr
+    fastfetch
+    tealdeer # tldr client
 
     nix-tree
 
@@ -19,10 +19,7 @@
 
     # Disk
     gdu
-    gnome-disk-utility
-
-    # Auth
-    ente-auth
+    # gnome-disk-utility
 
     # Note
     obsidian

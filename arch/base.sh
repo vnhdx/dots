@@ -3,15 +3,13 @@
 pkgs=(
   wget
   curl
+  fastfetch
   jq
   go-yq
   # busybox
+  tealdeer # tldr
 
-  htop
-  btop
-  gdu
-  gnome-disk-utility
-  powertop
+  # gnome-disk-utility
 
   fish # shell
 
@@ -23,19 +21,35 @@ pkgs=(
   fcitx5
   fcitx5-unikey
   fcitx5-configtool
+
+  # Network
+  iw
+  wireless-regdb
+
+  # Firmware
+  fwupd
+  fwupd-efi
+
+  # Snapshot
+  snapper
+  snap-pac
 )
 
-setup() {
-  cfgs=(
-    fish
-    fcitx5
-  )
-  for cfg in "${cfgs[@]}"; do
-    cp -r "../config/${cfg}/" ~/.config/
-  done
-}
+cfgs=(
+  fish
+  fcitx5
+)
 
-env() {
+_install() {
+  # Snapshot
+  sudo snapper -c root create-config /
+  sudo systemctl disable snapper-timeline.timer
+
+  # Time
+  # sudo timedatectl set-timezone Asia/Ho_Chi_Minh
+  # sudo timedatectl set-local-rtc 0
+
+  # Environment
   cat <<EOF >> ~/.bashrc
 
 # export QT_QPA_PLATFORMTHEME=qt6ct
@@ -51,7 +65,7 @@ export PATH="\$HOME/.local/bin:\$PATH"
 EOF
 }
 
-. ./_pkg.sh
+source ./_yay.sh
+source ../bin/_main.sh
 
-setup
-env
+main "$@"

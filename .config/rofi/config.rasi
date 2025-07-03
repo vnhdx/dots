@@ -84,6 +84,7 @@ element-icon {
     text-color:       inherit;
 }
 window {
+    width: 30%;
     padding:          5;
     background-color: @background;
     border:           1;

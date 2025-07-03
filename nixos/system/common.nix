@@ -18,7 +18,6 @@
     yq
 
     # gnome-keyring
-    ente-auth
   ];
 
   # Default shell

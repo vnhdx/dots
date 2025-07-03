@@ -2,18 +2,23 @@
 
 pkgs=(
   neovim
-  lazygit
+  # lazygit
   fzf
   ripgrep
   fd
   luarocks
 )
 
-. ./_pkg.sh
+_install() {
+  echo 'Setup lazyvim'
+  git clone git@github.com:vnhdx/nvim-conf.git \
+    ~/.config/nvim
 
-echo 'Setup lazyvim'
-git clone git@github.com:vinh-d0/nvim-conf.git \
-  ~/.config/nvim
+  cd ~/.config/nvim
+  git remote add upstream https://github.com/LazyVim/starter
+}
 
-cd ~/.config/nvim
-git remote add upstream https://github.com/LazyVim/starter
+source ./_yay.sh
+source ../bin/_main.sh
+
+main "$@"

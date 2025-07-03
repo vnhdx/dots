@@ -24,6 +24,23 @@ pkgs=(
   # k9s
 )
 
-exec ../bin/mise.sh
+cfgs=(
+  containers
+  lazygit
+  zed
+)
 
-. ./_pkg.sh
+source ./_yay.sh
+source ../bin/_main.sh
+
+_install() {
+  ../bin/mise.sh
+
+  cat <<EOF >> ~/.bashrc
+
+# Go
+export GOBIN="\$HOME/.local/bin"
+EOF
+}
+
+main "$@"

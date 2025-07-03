@@ -27,7 +27,7 @@ pkgs=(
   waybar # gas eww
   dunst
   libnotify
-  rofi-wayland
+  fuzzel
 
   # LCD Brightness, player
   brightnessctl
@@ -50,35 +50,27 @@ pkgs=(
   xarchiver
   gvfs
 
-  # superfile
-  # xarchiver
-
   # Wireless
   # overskride
   # networkmanagerapplet
 
   # DM
   # uwsm
+  greetd
   greetd-tuigreet
 )
 
-setup() {
-  cfgs=(
-    foot
-    gtk-3.0
-    hypr
-    rofi
-    waybar
-  )
+cfgs=(
+  foot
+  gtk-3.0
+  hypr
+  rofi
+  waybar
+)
 
-  for cfg in "${cfgs[@]}"
-  do
-    cp -r "../.config/${cfg}" ~/.config/
-  done
-}
-
-env(){
-  cat <<EOF >> ~/.bashrc
+_install() {
+  # Environment
+  cat <<EOF >>~/.bashrc
 
 # Hyprland
 # export NIXOS_OZONE_WL=1
@@ -88,7 +80,7 @@ env(){
 EOF
 }
 
-. ./_pkg.sh
+source ./_yay.sh
+source ../bin/_main.sh
 
-setup
-env
+main "$@"

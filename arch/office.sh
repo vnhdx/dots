@@ -1,15 +1,26 @@
 #!/usr/bin/env bash
 
+cwd=$(dirname "$(readlink -f "$0")")
+
 pkgs=(
   # Email
-  thunderbird
+  # thunderbird
   # evolution
-  #geary
+  # geary
   # mailspring-bin
 
   # Docs
+  # libreoffice-still
   # libreoffice-fresh
-  onlyoffice-bin
+  # onlyoffice-bin
+
+  fastfetch
 )
 
-. ./_pkg.sh
+
+source "${cwd}/_yay.sh"
+source "${cwd}/../bin/_main.sh"
+
+main "$@"
+
+# ${cwd}/../bin/onlyoffice.sh

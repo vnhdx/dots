@@ -9,14 +9,9 @@ pkgs=(
   luarocks
 )
 
-_install() {
-  echo 'Setup lazyvim'
-  git clone git@github.com:vnhdx/nvim-conf.git \
-    ~/.config/nvim
-
-  cd ~/.config/nvim
-  git remote add upstream https://github.com/LazyVim/starter
-}
+cfgs=(
+	nvim
+)
 
 source ./_yay.sh
 source ../bin/_main.sh

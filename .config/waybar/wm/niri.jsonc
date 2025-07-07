@@ -26,28 +26,13 @@
 		"power-profiles-daemon",
 		"battery",
 		// "battery#bat2",
+		"custom/notifications",
 		"network",
 		"clock",
 		"tray",
 		"custom/power"
 	],
 	// Modules configuration
-	// "sway/workspaces": {
-	//     "disable-scroll": true,
-	//     "all-outputs": true,
-	//     "warp-on-scroll": false,
-	//     "format": "{name}: {icon}",
-	//     "format-icons": {
-	//         "1": "",
-	//         "2": "",
-	//         "3": "",
-	//         "4": "",
-	//         "5": "",
-	//         "urgent": "",
-	//         "focused": "",
-	//         "default": ""
-	//     }
-	// },
 	"keyboard-state": {
 		"numlock": true,
 		"capslock": true,
@@ -112,12 +97,26 @@
 		"critical-threshold": 80,
 		// "format-critical": "{temperatureC}°C {icon}",
 		"format": "{temperatureC}°C {icon}",
-		"format-icons": ["", "", ""]
+		"format-icons": [
+			"",
+			"",
+			""
+		]
 	},
 	"backlight": {
 		// "device": "acpi_video1",
 		"format": "{percent}% {icon}",
-		"format-icons": ["", "", "", "", "", "", "", "", ""]
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		]
 	},
 	"battery": {
 		"states": {
@@ -132,7 +131,13 @@
 		"format-alt": "{time} {icon}",
 		// "format-good": "", // An empty format will hide the module
 		// "format-full": "",
-		"format-icons": ["", "", "", "", ""]
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
 	},
 	// "battery#bat2": {
 	//     "bat": "BAT2"
@@ -172,7 +177,11 @@
 			"phone": "",
 			"portable": "",
 			"car": "",
-			"default": ["", "", ""]
+			"default": [
+				"",
+				"",
+				""
+			]
 		},
 		"on-click": "pavucontrol"
 	},
@@ -187,6 +196,11 @@
 		"escape": true,
 		"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
 		// "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+	},
+	"custom/notifications": {
+		"exec": "echo '🔔'",
+		"on-click": "makoctl mode -s history",
+		"tooltip": "Notifications"
 	},
 	"custom/power": {
 		"format": "⏻ ",

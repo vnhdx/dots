@@ -61,11 +61,12 @@ pkgs=(
 )
 
 cfgs=(
-	foot
-	gtk-3.0
 	hypr
+	foot
 	fuzzel
+	dunst
 	waybar
+	gtk-3.0
 )
 
 _install() {

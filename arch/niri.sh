@@ -5,9 +5,9 @@ cwd=$(dirname "$(readlink -f "$0")")
 pkgs=(
 	niri
 
-	fuzzel # a suggested Wayland application launcher
+	fuzzel # an application launcher
 	foot   # a terminal emulator wezterm, alacritty, kitty...
-	mako   # a suggested Wayland notification daemon
+	dunst  # a notification daemon
 	# org.freedesktop.secrets # for apps to rely on secrets portal
 	swaybg   # a suggested Wayland wallpaper tool
 	swaylock # a suggested Wayland screen locker
@@ -17,11 +17,10 @@ pkgs=(
 	xdg-desktop-portal-gtk # a suggested XDG desktop portal
 	# xdg-desktop-portal-gnome # a XDG desktop portal required for screencasting
 
+	libnotify
 	brightnessctl
 	# playerctl
-	grim
 	wf-recorder
-	slurp
 	wl-clipboard
 
 	mpv
@@ -42,8 +41,10 @@ pkgs=(
 
 cfgs=(
 	niri
+	foot
 	fuzzel
 	waybar
+	dunst
 	gtk-3.0
 )
 

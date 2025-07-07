@@ -34,11 +34,11 @@ input {
 		// dwtp
 		// drag false
 		// drag-lock
-		natural-scroll
+		// natural-scroll
 		// accel-speed 0.2
 		// accel-profile "flat"
 		// scroll-method "two-finger"
-		// disabled-on-external-mouse
+		disabled-on-external-mouse
 	}
 
 	mouse {
@@ -83,10 +83,11 @@ input {
 	// for the resolution.
 	// If the mode is omitted altogether or is invalid, niri will pick one automatically.
 	// Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-	mode "1920x1080@120.030"
+	// mode "1920x1080@120.030"
+	mode "1920x1080@60.008"
 
 	// You can use integer or fractional scale, for example use 1.5 for 150% scale.
-	scale 2
+	scale 1.25
 
 	// Transform allows to rotate the output counter-clockwise, valid values are:
 	// normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -365,6 +366,9 @@ binds {
 	Super+E hotkey-overlay-title="File manager" { spawn "thunar"; }
 	Super+Shift+B hotkey-overlay-title="Change wallpaper" { spawn "~/.config/niri/scripts/wallpaper.sh"; }
 
+    Super+Shift+N hotkey-overlay-title="Pop a notification" { spawn "dunstctl" "history-pop"; }
+    Super+Shift+C hotkey-overlay-title="Close all notifications" { spawn "dunstctl" "close-all"; }
+
 	// You can also use a shell. Do this if you need pipes, multiple commands, etc.
 	// Note: the entire command goes as a single argument in the end.
 	// Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
@@ -375,6 +379,10 @@ binds {
 	XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
 	XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
 	XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
+  // Backlight
+  XF86MonBrightnessUp { spawn "brightnessctl" "s" "+5%"; }
+  XF86MonBrightnessDown { spawn "brightnessctl" "s" "5%-"; }
 
 	// Open/close the Overview: a zoomed-out view of workspaces and windows.
 	// You can also move the mouse into the top-left hot corner,

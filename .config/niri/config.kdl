@@ -5,6 +5,7 @@
 
 environment {
 	GTK_THEME "Adwaita:dark"
+	ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
 // Input device configuration.
@@ -155,7 +156,7 @@ layout {
 	// You can change how the focus ring looks.
 	focus-ring {
 		// Uncomment this line to disable the focus ring.
-		// off
+		off
 
 		// How many logical pixels the ring extends out from the windows.
 		width 4
@@ -166,7 +167,7 @@ layout {
 		// - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
 		// Color of the ring on the active monitor.
-		active-color "#7fc8ff"
+		active-color "#89b4fa"
 
 		// Color of the ring on inactive monitors.
 		inactive-color "#505050"
@@ -191,11 +192,11 @@ layout {
 	border {
 		// The settings are the same as for the focus ring.
 		// If you enable the border, you probably want to disable the focus ring.
-		off
+		// off
 
 		width 4
-		active-color "#ffc87f"
-		inactive-color "#505050"
+	    active-color "#cba6f7"
+	    inactive-color "#6c7086"
 
 		// Color of the border around windows that request your attention.
 		urgent-color "#9b0000"
@@ -354,20 +355,20 @@ binds {
 	Mod+Shift+Slash { show-hotkey-overlay; }
 
 	// Suggested binds for running programs: terminal, app launcher, screen locker.
-	Super+T hotkey-overlay-title="Open a Terminal" { spawn "footclient"; }
+	Mod+T repeat=false hotkey-overlay-title="Open a Terminal" { spawn "footclient"; }
 	Mod+D hotkey-overlay-title="Run an Application" { spawn "fuzzel"; }
-	Super+Alt+L hotkey-overlay-title="Lock the Screen" { spawn "swaylock"; }
-	Super+Shift+R hotkey-overlay-title="Reload Niri Config" { spawn "niri" "msg" "reload-config"; }
+	Mod+Alt+L hotkey-overlay-title="Lock the Screen" { spawn "swaylock"; }
+	// Mod+Shift+R hotkey-overlay-title="Reload Niri Config" { spawn "niri" "msg" "reload-config"; }
 
-	Super+W hotkey-overlay-title="Open Firefox" { spawn "firefox"; }
-	Super+Z hotkey-overlay-title="Open Zed" { spawn "zeditor"; }
-	Super+N hotkey-overlay-title="Open NeoVim" { spawn "footclient" "-e" "nvim"; }
-	Super+M hotkey-overlay-title="Open Telegram" { spawn "Telegram"; }
-	Super+E hotkey-overlay-title="File manager" { spawn "thunar"; }
-	Super+Shift+B hotkey-overlay-title="Change wallpaper" { spawn "~/.config/niri/scripts/wallpaper.sh"; }
+	Mod+B repeat=false hotkey-overlay-title="Open Firefox" { spawn "firefox"; }
+	Mod+Z repeat=false hotkey-overlay-title="Open Zed" { spawn "zeditor"; }
+	Mod+N repeat=false hotkey-overlay-title="Open NeoVim" { spawn "footclient" "-e" "nvim"; }
+	Mod+M repeat=false hotkey-overlay-title="Open Telegram" { spawn "Telegram"; }
+	Mod+E repeat=false hotkey-overlay-title="File manager" { spawn "thunar"; }
+	Mod+Shift+B repeat=false hotkey-overlay-title="Change wallpaper" { spawn "~/.config/niri/scripts/wallpaper.sh"; }
 
-    Super+Shift+N hotkey-overlay-title="Pop a notification" { spawn "dunstctl" "history-pop"; }
-    Super+Shift+C hotkey-overlay-title="Close all notifications" { spawn "dunstctl" "close-all"; }
+	Mod+Shift+N repeat=false hotkey-overlay-title="Pop a notification" { spawn "dunstctl" "history-pop"; }
+	Mod+Shift+C repeat=false hotkey-overlay-title="Close all notifications" { spawn "dunstctl" "close-all"; }
 
 	// You can also use a shell. Do this if you need pipes, multiple commands, etc.
 	// Note: the entire command goes as a single argument in the end.
@@ -380,9 +381,9 @@ binds {
 	XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
 	XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
-  // Backlight
-  XF86MonBrightnessUp { spawn "brightnessctl" "s" "+5%"; }
-  XF86MonBrightnessDown { spawn "brightnessctl" "s" "5%-"; }
+	// Backlight
+	XF86MonBrightnessUp { spawn "brightnessctl" "s" "+5%"; }
+	XF86MonBrightnessDown { spawn "brightnessctl" "s" "5%-"; }
 
 	// Open/close the Overview: a zoomed-out view of workspaces and windows.
 	// You can also move the mouse into the top-left hot corner,

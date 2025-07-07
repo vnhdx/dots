@@ -5,3 +5,7 @@
 
 -- Shell
 vim.o.shell = "fish"
+
+-- Tab
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4

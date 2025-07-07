@@ -2,7 +2,7 @@
 
 # Disable serial port 8250
 udev_disable_serial_8250() {
-  cat <<EOF | sudo tee /etc/modprobe.d/disable-serial8250.conf
+	cat <<EOF | sudo tee /etc/modprobe.d/disable-serial8250.conf
 # Disable serial port 8250
 blacklist 8250
 blacklist 8250_pnp
@@ -11,7 +11,7 @@ EOF
 }
 
 udev_disable_extra() {
-  cat <<EOF | sudo tee /etc/modprobe.d/disable-extra.conf
+	cat <<EOF | sudo tee /etc/modprobe.d/disable-extra.conf
 # Disable fuse, configfs
 blacklist fuse
 blacklist configfs
@@ -20,7 +20,7 @@ EOF
 
 # Disable serial port 8250
 dracut_disable_modules() {
-  cat <<EOF | sudo tee /etc/dracut.conf.d/minimal.conf
+	cat <<EOF | sudo tee /etc/dracut.conf.d/minimal.conf
 # Disable some modules
 omit_drivers+=" 8250 8250_pnp floppy pcspkr "
 omit_modules+=" bluetooth firewire firewire_core raid6_pq nouveau nvidia nvidiafb "
@@ -33,11 +33,11 @@ EOF
 }
 
 install() {
-  udev_disable_serial_8250
-  udev_disable_extra
-  dracut_disable_modules
+	udev_disable_serial_8250
+	udev_disable_extra
+	dracut_disable_modules
 
-  sudo dracut-rebuild
+	sudo dracut-rebuild
 }
 
 source ../bin/_main.sh

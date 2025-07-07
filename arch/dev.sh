@@ -1,42 +1,42 @@
 #!/usr/bin/env bash
 
 pkgs=(
-  git
-  lazygit
-  bat
-  make
-  openssl
-  protobuf
+	git
+	lazygit
+	bat
+	make
+	openssl
+	protobuf
 
-  # asdf
-  # mise
+	# asdf
+	# mise
 
-  zed
-  # code
+	zed
+	# code
 
-  doublecmd
-  bcompare
-  # meld
+	doublecmd
+	bcompare
+	# meld
 
-  podman
-  # helm
-  # kubectl
-  # k9s
+	podman
+	# helm
+	# kubectl
+	# k9s
 )
 
 cfgs=(
-  containers
-  lazygit
-  zed
+	containers
+	lazygit
+	zed
 )
 
 source ./_yay.sh
 source ../bin/_main.sh
 
 _install() {
-  ../bin/mise.sh
+	../bin/mise.sh
 
-  cat <<EOF >> ~/.bashrc
+	cat <<EOF >>~/.bashrc
 
 # Go
 export GOBIN="\$HOME/.local/bin"

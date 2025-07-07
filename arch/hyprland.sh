@@ -1,76 +1,76 @@
 #!/usr/bin/env bash
 
 pkgs=(
-  hyprland
-  # xdg-desktop-portal-hyprland
-  xdg-desktop-portal-gtk
+	hyprland
+	# xdg-desktop-portal-hyprland
+	xdg-desktop-portal-gtk
 
-  # Hypr Ecosystem
-  # https://wiki.hypr.land/Hypr-Ecosystem/hyprsysteminfo/
-  hyprpaper
-  hyprpicker
-  hypridle
-  hyprlock
-  # hyprpicker
-  # hyprcursor
-  hyprsunset
-  # hyprpolkitagent
-  # hyprcursor
-  # hyprutils
-  # hyprlang
-  # aquamarine
-  # hyprgraphics
+	# Hypr Ecosystem
+	# https://wiki.hypr.land/Hypr-Ecosystem/hyprsysteminfo/
+	hyprpaper
+	hyprpicker
+	hypridle
+	hyprlock
+	# hyprpicker
+	# hyprcursor
+	hyprsunset
+	# hyprpolkitagent
+	# hyprcursor
+	# hyprutils
+	# hyprlang
+	# aquamarine
+	# hyprgraphics
 
-  # Useful utilities
-  # https://wiki.hypr.land/Useful-Utilities/
-  foot
-  waybar # gas eww
-  dunst
-  libnotify
-  fuzzel
+	# Useful utilities
+	# https://wiki.hypr.land/Useful-Utilities/
+	foot
+	waybar # gas eww
+	dunst
+	libnotify
+	fuzzel
 
-  # LCD Brightness, player
-  brightnessctl
-  playerctl
+	# LCD Brightness, player
+	brightnessctl
+	playerctl
 
-  # Screenshot
-  grim
-  wf-recorder
-  slurp
-  wl-clipboard
-  hyprshot
+	# Screenshot
+	grim
+	wf-recorder
+	slurp
+	wl-clipboard
+	hyprshot
 
-  mpv
-  imv
+	mpv
+	imv
 
-  # File namanger
-  thunar
-  thunar-volman
-  thunar-archive-plugin
-  xarchiver
-  gvfs
+	# File namanger
+	thunar
+	thunar-volman
+	thunar-archive-plugin
+	xarchiver
+	gvfs
 
-  # Wireless
-  # overskride
-  # networkmanagerapplet
+	# Wireless
+	# overskride
+	# networkmanagerapplet
 
-  # DM
-  # uwsm
-  greetd
-  greetd-tuigreet
+	# DM
+	# uwsm
+	greetd
+	greetd-tuigreet
 )
 
 cfgs=(
-  foot
-  gtk-3.0
-  hypr
-  rofi
-  waybar
+	foot
+	gtk-3.0
+	hypr
+	fuzzel
+	waybar
 )
 
 _install() {
-  # Environment
-  cat <<EOF >>~/.bashrc
+	# Environment
+	cat <<EOF >>~/.bashrc
 
 # Hyprland
 # export NIXOS_OZONE_WL=1

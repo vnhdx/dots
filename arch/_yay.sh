@@ -7,41 +7,41 @@ declare -a pkgs
 declare -a cfgs
 
 get_pkgs() {
-  if [ ${#pkgs[@]} -eq 0 ]; then
-    return 0
-  fi
+	if [ ${#pkgs[@]} -eq 0 ]; then
+		return 0
+	fi
 
-  echo "${pkgs[@]}"
+	echo "${pkgs[@]}"
 }
 
 install() {
-  names=$(get_pkgs)
-  if [ -z "${names}" ]; then
-    echo 'warn => no packages'
-    return 0
-  fi
+	names=$(get_pkgs)
+	if [ -z "${names}" ]; then
+		echo 'warn => no packages'
+		return 0
+	fi
 
-  echo "install => ${names}"
-  yay -S ${names}
+	echo "install => ${names}"
+	yay -S ${names}
 
-  for cfg in "${cfgs[@]}"; do
-    cp -r "../.config/${cfg}/" ~/.config/
-  done
+	for cfg in "${cfgs[@]}"; do
+		cp -r "../.config/${cfg}/" ~/.config/
+	done
 
-  if declare -f _install > /dev/null; then
-    _install
-  fi
+	if declare -f _install >/dev/null; then
+		_install
+	fi
 }
 
 uninstall() {
-  names=$(get_pkgs)
-  if [ -z "${names}" ]; then
-    return
-  fi
+	names=$(get_pkgs)
+	if [ -z "${names}" ]; then
+		return
+	fi
 
-  yay -R ${names} # yay -Rcns ...
+	yay -R ${names} # yay -Rcns ...
 
-  if declare -f _uninstall > /dev/null; then
-    _uninstall
-  fi
+	if declare -f _uninstall >/dev/null; then
+		_uninstall
+	fi
 }

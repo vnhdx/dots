@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 pkgs=(
-  noto-fonts
-  noto-fonts-cjk
+	noto-fonts
+	noto-fonts-cjk
 
-  ttf-firacode-nerd
-  ttf-font-awesome
-  ttf-opensans
+	ttf-firacode-nerd
+	ttf-font-awesome
+	ttf-opensans
 )
 
 source ./_yay.sh

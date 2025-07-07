@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 pkgs=(
-  neovim
-  # lazygit
-  fzf
-  ripgrep
-  fd
-  luarocks
+	neovim
+	# lazygit
+	fzf
+	ripgrep
+	fd
+	luarocks
 )
 
 cfgs=(

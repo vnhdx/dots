@@ -1,24 +1,24 @@
 #!/usr/bin/env bash
 
 pkgs=(
-  htop
-  btop
-  gdu
-  powertop
+	htop
+	btop
+	gdu
+	powertop
 
-  # glances
-  duf
-  smartmontools
-  dmidecode
-  inxi
+	# glances
+	duf
+	smartmontools
+	dmidecode
+	inxi
 
-  # Network
-  speedtest-cli
+	# Network
+	speedtest-cli
 )
 
 cfgs=(
-  btop
-  htop
+	btop
+	htop
 )
 
 source ./_yay.sh

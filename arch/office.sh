@@ -3,20 +3,19 @@
 cwd=$(dirname "$(readlink -f "$0")")
 
 pkgs=(
-  # Email
-  # thunderbird
-  # evolution
-  # geary
-  # mailspring-bin
+	# Email
+	# thunderbird
+	# evolution
+	# geary
+	# mailspring-bin
 
-  # Docs
-  # libreoffice-still
-  # libreoffice-fresh
-  # onlyoffice-bin
+	# Docs
+	# libreoffice-still
+	# libreoffice-fresh
+	# onlyoffice-bin
 
-  fastfetch
+	fastfetch
 )
-
 
 source "${cwd}/_yay.sh"
 source "${cwd}/../bin/_main.sh"

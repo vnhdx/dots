@@ -42,6 +42,7 @@ pkgs=(
 
 cfgs=(
 	niri
+	fuzzel
 	waybar
 	gtk-3.0
 )

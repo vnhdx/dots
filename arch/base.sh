@@ -1,56 +1,56 @@
 #!/usr/bin/env bash
 
 pkgs=(
-  wget
-  curl
-  fastfetch
-  jq
-  go-yq
-  # busybox
-  tealdeer # tldr
+	wget
+	curl
+	fastfetch
+	jq
+	go-yq
+	# busybox
+	tealdeer # tldr
 
-  # gnome-disk-utility
+	# gnome-disk-utility
 
-  fish # shell
+	fish # shell
 
-  neovim
+	neovim
 
-  gnome-keyring
+	gnome-keyring
 
-  # Keyboard
-  fcitx5
-  fcitx5-unikey
-  fcitx5-configtool
+	# Keyboard
+	fcitx5
+	fcitx5-unikey
+	fcitx5-configtool
 
-  # Network
-  iw
-  wireless-regdb
+	# Network
+	iw
+	wireless-regdb
 
-  # Firmware
-  fwupd
-  fwupd-efi
+	# Firmware
+	fwupd
+	fwupd-efi
 
-  # Snapshot
-  snapper
-  snap-pac
+	# Snapshot
+	snapper
+	snap-pac
 )
 
 cfgs=(
-  fish
-  fcitx5
+	fish
+	fcitx5
 )
 
 _install() {
-  # Snapshot
-  sudo snapper -c root create-config /
-  sudo systemctl disable snapper-timeline.timer
+	# Snapshot
+	sudo snapper -c root create-config /
+	sudo systemctl disable snapper-timeline.timer
 
-  # Time
-  # sudo timedatectl set-timezone Asia/Ho_Chi_Minh
-  # sudo timedatectl set-local-rtc 0
+	# Time
+	# sudo timedatectl set-timezone Asia/Ho_Chi_Minh
+	# sudo timedatectl set-local-rtc 0
 
-  # Environment
-  cat <<EOF >> ~/.bashrc
+	# Environment
+	cat <<EOF >>~/.bashrc
 
 # export QT_QPA_PLATFORMTHEME=qt6ct
 

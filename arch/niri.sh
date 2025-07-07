@@ -44,6 +44,7 @@ cfgs=(
 	foot
 	fuzzel
 	waybar
+	swaylock
 	dunst
 	gtk-3.0
 )

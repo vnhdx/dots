@@ -1,7 +1,12 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 cwd=$(dirname "$(readlink -f "$0")")
 
-cfg="$1"
+cfgs="$@"
 
-diff -r "${cwd}/../.config/${cfg}" "$HOME/.config/${cfg}"
+for cfg in ${cfgs}; do
+	# echo "=> ${cfg}"
+	diff -r "${cwd}/../.config/${cfg}" "$HOME/.config/${cfg}"
+done
+
+# cmp.sh | bat -l diff

@@ -35,8 +35,9 @@ pkgs=(
 	gvfs
 
 	# DM
-	greetd
-	greetd-tuigreet
+	# greetd
+	# greetd-tuigreet
+	ly
 )
 
 cfgs=(
@@ -45,34 +46,9 @@ cfgs=(
 	gtk-3.0
 )
 
-_greetd() {
-	cat <<EOF | sudo tee /etc/greetd/config.toml
-# The VT to run the greeter on. Can be "next", "current" or a number
-# designating the VT.
-vt = 1
-
-# The default session, also known as the greeter.
-[default_session]
-
-# $(agreety) is the bundled agetty/login-lookalike. You can replace $(/bin/sh)
-# with whatever you want started, such as $(sway).
-# command = "agreety --cmd /bin/sh"
-# command = "/usr/bin/tuigreet -r -c niri-session"
-command = "niri-session"
-
-# The user to run the command as. The privileges this user must have depends
-# on the greeter. A graphical greeter may for example require the user to be
-# in the $(video) group.
-user = "$USER"
-EOF
-}
-
+# Niri session with systemd
 # https://github.com/YaLTeR/niri/wiki/Example-systemd-Setup
-_systemd() {
-
-}
-
-_install() {
+_niri() {
 	ln -sf ~/.config/waybar/wm/niri.jsonc ~/.config/waybar/config.jsonc
 
 	systemctl --user add-wants niri.service \
@@ -80,6 +56,19 @@ _install() {
 		~/.config/niri/systemd/swaybg.service
 
 	systemctl --user daemon-reload
+}
+
+# Display manager
+_dm() {
+	# # /etc/greetd/config.toml
+	# command = "/usr/bin/tuigreet -r -c niri-session"
+
+	sudo systemctl enable ly.service
+	sudo systemctl disable getty@tty2.service
+}
+
+_install() {
+	_niri
 }
 
 # _uninstall() {

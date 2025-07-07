@@ -260,7 +260,7 @@ layout {
 
 // Use systemd to launch these instead
 // spawn-at-startup "waybar"
-// spawn-at-startup "swaybg" "-i" "$HOME/.cache/wallpaper.jpg"
+// spawn-at-startup "swaybg" "-i" "~/.cache/wallpaper.jpg"
 // spawn-at-startup "/usr/lib/xdg-desktop-portal-gtk"
 
 // Foot terminal emulator with server mode for better perf

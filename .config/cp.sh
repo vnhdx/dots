@@ -2,6 +2,10 @@
 
 cwd=$(dirname "$(readlink -f "$0")")
 
-cfg="$1"
+cfgs="$@"
 
-cp -r "${cwd}/../.config/${cfg}" "$HOME/.config/"
+for cfg in ${cfgs}; do
+	echo "${cfg} => copy"
+	cp -r "${cwd}/../.config/${cfg}" "$HOME/.config/"
+	echo '==> done'
+done

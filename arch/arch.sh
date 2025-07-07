@@ -1,28 +1,37 @@
 #!/usr/bin/env bash
 
 features=(
-  # base
-  # fonts
+	# base
+	# fonts
 
-  # hyprland
+	# DE
+	# xfce
+	# kde
 
-  # monitoring
+	# WM
+	# niri
+	# hyprland
 
-  # dev
-  # nvim
-  # golang
-  # flutter
+	# monitoring
 
-  # perf
+	# dev
+	# nvim
+	# golang
+	# flutter
 
-  office
+	# perf
+
+	# office
 )
 
 for feature in "${features[@]}"; do
-  echo "feature => ${feature}"
-  if [ -f "${feature}.sh" ]; then
-    bash "${feature}.sh"
-  else
-    echo "warn => ${feature}.sh not found"
-  fi
+	echo "${feature} => install"
+
+	if [ -f "${feature}.sh" ]; then
+		bash "${feature}.sh"
+	else
+		echo "warn => ${feature}.sh not found"
+	fi
+
+	echo "${features} => done"
 done

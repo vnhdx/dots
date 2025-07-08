@@ -14,8 +14,8 @@ pkgs=(
 	swayidle # an idle management daemon for Wayland
 	waybar   # a suggested Wayland customizable desktop bar
 	# xwayland-satellite # for running X11 apps in XWayland
-	xdg-desktop-portal-gtk # a suggested XDG desktop portal
-	# xdg-desktop-portal-gnome # a XDG desktop portal required for screencasting
+	# xdg-desktop-portal-gtk # a suggested XDG desktop portal
+	xdg-desktop-portal-gnome # a XDG desktop portal required for screencasting
 
 	libnotify
 	brightnessctl

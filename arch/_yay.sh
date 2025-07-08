@@ -27,10 +27,6 @@ install() {
 	for cfg in "${cfgs[@]}"; do
 		cp -r "../.config/${cfg}/" ~/.config/
 	done
-
-	if declare -f _install >/dev/null; then
-		_install
-	fi
 }
 
 uninstall() {
@@ -39,9 +35,5 @@ uninstall() {
 		return
 	fi
 
-	yay -R ${names} # yay -Rcns ...
-
-	if declare -f _uninstall >/dev/null; then
-		_uninstall
-	fi
+	yay -R ${names}
 }

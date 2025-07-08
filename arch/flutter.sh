@@ -2,7 +2,7 @@
 
 pkgs=(
 	unzip
-	xz-utils
+	# xz-utils
 	zip
 	# libglu1-mesa
 
@@ -16,15 +16,15 @@ pkgs=(
 
 _install() {
 	# Flutter
-	mise i flutter
+	# mise use -g flutter
 	# flutter doctor --android-licenses
 
 	# Java SDK
-	mise i java@lts
+	# mise use -g java@lts
 
 	# Android SDK
-	mise i android-sdk
-	sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
+	mise use -g android-sdk
+	# sdkmanager "platform-tools" "platforms;android-36" "build-tools;36.0.0"
 
 	# Environment
 	cat <<EOF >>~/.bashrc

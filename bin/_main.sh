@@ -17,15 +17,19 @@ main() {
 	'install' | 'i')
 		if declare -f install >/dev/null; then
 			install
-		else
-			echo 'error => missing install() function'
+		fi
+
+		if declare -f post_install >/dev/null; then
+			post_install
 		fi
 		;;
 	'uninstall' | 'u')
 		if declare -f install >/dev/null; then
 			uninstall
-		else
-			echo 'error => missing install() function'
+		fi
+
+		if declare -f post_uninstall >/dev/null; then
+			post_uninstall
 		fi
 		;;
 	'help' | '-h' | '--help')

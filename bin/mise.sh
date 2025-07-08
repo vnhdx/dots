@@ -1,10 +1,12 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+
+cwd=$(dirname "$(readlink -f "$0")")
 
 install() {
 	curl https://mise.run | sh
 }
 
-setup() {
+post_install() {
 	eval "$(~/.local/bin/mise activate)"
 
 	# This is required for completions to work in mise
@@ -13,21 +15,19 @@ setup() {
 	mise plugins add godot https://github.com/ez-connect/asdf-godot.git
 
 	# Autocomplete for fish
-	if command fish -v &>/dev/null ; then
+	if command fish -v &>/dev/null; then
 		mkdir -p ~/.config/fish/completions
 		# ln -sf ~/.asdf/completions/asdf.fish ~/.config/fish/completions/ # pre v0.16
-		mise completion fish > ~/.config/fish/completions/mise.fish
+		mise completion fish >~/.config/fish/completions/mise.fish
 	fi
-}
 
-env() {
-	cat <<EOF >> ~/.bashrc
+	cat <<EOF >>~/.bashrc
 
 # Mise
 eval "\$(mise activate bash)"
 EOF
 }
 
-install
-setup
-env
+source "${cwd}/_main.sh"
+
+main "$@"

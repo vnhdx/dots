@@ -403,8 +403,8 @@ binds {
 	Mod+E repeat=false hotkey-overlay-title="File manager" { spawn "thunar"; }
 	Mod+Shift+B repeat=false hotkey-overlay-title="Change wallpaper" { spawn "~/.config/niri/scripts/wallpaper.sh"; }
 
-	Mod+Shift+N repeat=false hotkey-overlay-title="Pop a notification" { spawn "dunstctl" "history-pop"; }
-	Mod+Shift+C repeat=false hotkey-overlay-title="Close all notifications" { spawn "dunstctl" "close-all"; }
+	Mod+Shift+N repeat=false hotkey-overlay-title="Pop a notification" { spawn "makoctl" "restore"; }
+	Mod+Shift+C repeat=false hotkey-overlay-title="Close all notifications" { spawn "makoctl" "dismiss"; }
 
 	// You can also use a shell. Do this if you need pipes, multiple commands, etc.
 	// Note: the entire command goes as a single argument in the end.

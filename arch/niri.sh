@@ -5,41 +5,35 @@ cwd=$(dirname "$(readlink -f "$0")")
 pkgs=(
 	niri
 
-	fuzzel # an application launcher
-	foot   # a terminal emulator wezterm, alacritty, kitty...
-	dunst  # a notification daemon
+	fuzzel                 # an application launcher
+	foot                   # a terminal emulator wezterm, alacritty, kitty...
+	mako                   # a suggested Wayland notification daemon
+	swaybg                 # a suggested Wayland wallpaper tool
+	swaylock               # a suggested Wayland screen locker
+	swayidle               # an idle management daemon for Wayland
+	waybar                 # a suggested Wayland customizable desktop bar
+	xwayland-satellite     # for running X11 apps in XWayland
+	xdg-desktop-portal-gtk # a suggested XDG desktop portal
+
+	# xdg-desktop-portal-gnome # a XDG desktop portal required for screencasting
 	# org.freedesktop.secrets # for apps to rely on secrets portal
-	swaybg   # a suggested Wayland wallpaper tool
-	swaylock # a suggested Wayland screen locker
-	swayidle # an idle management daemon for Wayland
-	waybar   # a suggested Wayland customizable desktop bar
-	# xwayland-satellite # for running X11 apps in XWayland
-	# xdg-desktop-portal-gtk # a suggested XDG desktop portal
-	xdg-desktop-portal-gnome # a XDG desktop portal required for screencasting
 
-	libnotify
-	brightnessctl
-	# playerctl
-	wf-recorder
-	wl-clipboard
+	libnotify     # Library for sending desktop notifications
+	brightnessctl # Lightweight brightness control tool
+	wf-recorder   # Screen recorder for wlroots-based compositors such as sway
+	wl-clipboard  # Command-line copy/paste utilities for Wayland
 
-	mpv
-	imv
+	mpv # cross-platform media player
+	imv # Image viewer for Wayland and X11
 
 	# File namanger
-	thunar
-	thunar-volman
-	thunar-archive-plugin
-	xarchiver
-	gvfs
+	thunar                # File manager for Xfce
+	thunar-volman         # Management of removable drives and media for Thunar
+	thunar-archive-plugin # Adds archive operations to the Thunar file context menus
+	xarchiver             # GTK+ frontend to various command line archivers
+	gvfs                  # Virtual filesystem implementation for GIO
 
-	# DM
-	# greetd
-	# greetd-tuigreet
-	ly
-
-	# # XWayland
-	xwayland-satellite
+	ly # TUI display manager
 )
 
 cfgs=(
@@ -48,7 +42,7 @@ cfgs=(
 	fuzzel
 	waybar
 	swaylock
-	dunst
+	mako
 	gtk-3.0
 )
 

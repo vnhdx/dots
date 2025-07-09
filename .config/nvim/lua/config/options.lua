@@ -7,5 +7,7 @@
 vim.o.shell = "fish"
 
 -- Tab
-vim.o.shiftwidth = 4
-vim.o.tabstop = 4
+vim.o.expandtab = false -- Use tabs instead of spaces
+vim.o.tabstop = 4 -- Number of spaces a tab is equal to
+vim.o.shiftwidth = 4 -- Number of spaces to use for autoindent
+vim.o.softtabstop = 4 -- Number of spaces a tab is equal to in insert mode

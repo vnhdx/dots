@@ -37,6 +37,9 @@ pkgs=(
 	# greetd
 	# greetd-tuigreet
 	ly
+
+	# # XWayland
+	xwayland-satellite
 )
 
 cfgs=(

@@ -302,7 +302,7 @@ layout {
 spawn-at-startup "foot" "-s"
 
 // Fcitx5
-spawn-at-startup "fcitx5"
+spawn-at-startup "fcitx5" "-d"
 
 // Xwayland
 // spawn-at-startup "xwayland-satellite"

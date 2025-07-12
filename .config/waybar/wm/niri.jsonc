@@ -26,7 +26,6 @@
 		"power-profiles-daemon",
 		"battery",
 		// "battery#bat2",
-		"custom/notifications",
 		"network",
 		"clock",
 		"tray",
@@ -196,11 +195,6 @@
 		"escape": true,
 		"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
 		// "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-	},
-	"custom/notifications": {
-		"exec": "echo '🔔'",
-		"on-click": "makoctl mode -s history",
-		"tooltip": "Notifications"
 	},
 	"custom/power": {
 		"format": "⏻ ",

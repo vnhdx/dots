@@ -1,15 +1,29 @@
 #!/usr/bin/env bash
 
-pkgs=(
-	noto-fonts
-	noto-fonts-cjk
+cwd=$(dirname "$(readlink -f "$0")")
 
-	ttf-firacode-nerd
+pkgs=(
 	ttf-font-awesome
-	ttf-opensans
+
+	# Noto
+	noto-fonts
+	# noto-fonts-cjk
+	# noto-fonts-emoji
+	# ttf-noto-nerd
+
+	# Inter
+	inter-font
+
+	# Roboto
+	# ttf-roboto
+	# ttf-roboto-mono-nerd
+
+	# Fira
+	# ttf-fira-sans
+	ttf-firacode-nerd
 )
 
-source ./_yay.sh
-source ../bin/_main.sh
+source "${cwd}/_yay.sh"
+source "${cwd}/../bin/_main.sh"
 
 main "$@"

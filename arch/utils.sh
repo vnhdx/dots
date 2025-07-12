@@ -9,3 +9,8 @@ pkgs=(
 cfgs=(
 	mc
 )
+
+source "${cwd}/_yay.sh"
+source "${cwd}/../bin/_main.sh"
+
+main "$@"

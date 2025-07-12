@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cwd=$(dirname "$(readlink -f "$0")")
+
 pkgs=(
 	river
 	xdg-desktop-portal-gtk
@@ -30,7 +32,7 @@ _uninstall() {
 	rm ~/.local/share/wayland-sessions/river.desktop
 }
 
-source ./_yay.sh
-source ../bin/_main.sh
+source "${cwd}/_yay.sh"
+source "${cwd}/../bin/_main.sh"
 
 main "$@"

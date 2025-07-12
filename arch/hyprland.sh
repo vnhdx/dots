@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cwd=$(dirname "$(readlink -f "$0")")
+
 pkgs=(
 	hyprland
 	# xdg-desktop-portal-hyprland
@@ -81,7 +83,7 @@ _install() {
 EOF
 }
 
-source ./_yay.sh
-source ../bin/_main.sh
+source "${cwd}/_yay.sh"
+source "${cwd}/../bin/_main.sh"
 
 main "$@"

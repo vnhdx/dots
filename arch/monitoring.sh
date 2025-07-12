@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cwd=$(dirname "$(readlink -f "$0")")
+
 pkgs=(
 	htop
 	btop
@@ -21,7 +23,7 @@ cfgs=(
 	htop
 )
 
-source ./_yay.sh
-source ../bin/_main.sh
+source "${cwd}/_yay.sh"
+source "${cwd}/../bin/_main.sh"
 
 main "$@"

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cwd=$(dirname "$(readlink -f "$0")")
+
 pkgs=(
 	wget
 	curl
@@ -65,7 +67,7 @@ export PATH="\$HOME/.local/bin:\$PATH"
 EOF
 }
 
-source ./_yay.sh
-source ../bin/_main.sh
+source "${cwd}/_yay.sh"
+source "${cwd}/../bin/_main.sh"
 
 main "$@"

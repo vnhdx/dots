@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cwd=$(dirname "$(readlink -f "$0")")
+
 pkgs=(
 	git
 	lazygit
@@ -30,8 +32,8 @@ cfgs=(
 	zed
 )
 
-source ./_yay.sh
-source ../bin/_main.sh
+source "${cwd}/_yay.sh"
+source "${cwd}/../bin/_main.sh"
 
 _install() {
 	../bin/mise.sh

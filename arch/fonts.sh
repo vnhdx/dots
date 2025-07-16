@@ -3,24 +3,19 @@
 cwd=$(dirname "$(readlink -f "$0")")
 
 pkgs=(
-	ttf-font-awesome
+	ttf-font-awesome # Iconic font designed for Bootstrap
 
-	# Noto
-	noto-fonts
-	# noto-fonts-cjk
-	# noto-fonts-emoji
-	# ttf-noto-nerd
+	noto-fonts # Google Noto TTF fonts
+	# noto-fonts-cjk   # Google Noto CJK fonts
+	# noto-fonts-emoji # Google Noto Color Emoji font
 
-	# Inter
-	inter-font
+	inter-font # A typeface specially designed for user interfaces
 
-	# Roboto
-	# ttf-roboto
-	# ttf-roboto-mono-nerd
+	# ttf-roboto           # Google's signature family of fonts
+	# ttf-roboto-mono-nerd # Patched font Roboto Mono from nerd fonts library
 
-	# Fira
-	# ttf-fira-sans
-	ttf-firacode-nerd
+	# ttf-fira-sans   # Mozilla's sans-serif typeface designed for Firefox OS
+	ttf-firacode-nerd # Patched font Fira (Fura) Code from nerd fonts library
 )
 
 source "${cwd}/_yay.sh"

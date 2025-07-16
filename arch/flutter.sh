@@ -3,14 +3,14 @@
 cwd=$(dirname "$(readlink -f "$0")")
 
 pkgs=(
-	unzip
-	# xz-utils
-	zip
+	zip   # Compressor/archiver for creating and modifying zipfiles
+	unzip # For extracting and viewing files in .zip archives
+	# xz    # Library and command line tools for XZ and LZMA compressed files
 	# libglu1-mesa
 
-	cmake
-	clang
-	ninja
+	cmake # A cross-platform open-source make system
+	clang # C language family frontend for LLVM
+	ninja # Small build system with a focus on speed
 
 	# jdk-openjdk
 	# android-sdk-cmdline-tools-latest
@@ -26,6 +26,7 @@ _install() {
 
 	# Android SDK
 	mise use -g android-sdk
+	sdkmanager "platform-tools"
 	# sdkmanager "platform-tools" "platforms;android-36" "build-tools;36.0.0"
 
 	# Environment

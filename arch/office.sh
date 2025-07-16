@@ -3,18 +3,18 @@
 cwd=$(dirname "$(readlink -f "$0")")
 
 pkgs=(
+	# Message
+	telegram-desktop # Official Telegram Desktop client
+
 	# Email
-	# thunderbird
-	# evolution
-	# geary
-	# mailspring-bin
+	thunderbird # Standalone mail and news reader from mozilla.org
+	# geary # A lightweight email client for the GNOME desktop
+	# evolution # Manage your email, contacts and schedule
 
 	# Docs
-	# libreoffice-still
-	# libreoffice-fresh
-	# onlyoffice-bin
-
-	fastfetch
+	libreoffice-fresh # LibreOffice branch which contains new features and program enhancements
+	# libreoffice-still # LibreOffice maintenance branch
+	# onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
 )
 
 source "${cwd}/_yay.sh"

@@ -189,7 +189,7 @@ layout {
 	// You can change how the focus ring looks.
 	focus-ring {
 		// Uncomment this line to disable the focus ring.
-		off
+		// off
 
 		// How many logical pixels the ring extends out from the windows.
 		width 4
@@ -200,10 +200,10 @@ layout {
 		// - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
 		// Color of the ring on the active monitor.
-		active-color "#89b4fa"
+		active-color "#cba6f7"
 
 		// Color of the ring on inactive monitors.
-		inactive-color "#505050"
+		inactive-color "#6c7086"
 
 		// You can also use gradients. They take precedence over solid colors.
 		// Gradients are rendered the same as CSS linear-gradient(angle, from, to).
@@ -225,7 +225,7 @@ layout {
 	border {
 		// The settings are the same as for the focus ring.
 		// If you enable the border, you probably want to disable the focus ring.
-		// off
+		off
 
 		width 4
 		active-color "#cba6f7"
@@ -397,7 +397,7 @@ binds {
 	// Mod+Shift+R hotkey-overlay-title="Reload Niri Config" { spawn "niri" "msg" "reload-config"; }
 
 	Mod+B repeat=false hotkey-overlay-title="Open Firefox" { spawn "firefox"; }
-	Mod+Z repeat=false hotkey-overlay-title="Open Zed" { spawn "zeditor"; }
+	Mod+Z repeat=false hotkey-overlay-title="Open Zed" { spawn "~/.local/bin/zed"; }
 	Mod+N repeat=false hotkey-overlay-title="Open NeoVim" { spawn "footclient" "-e" "nvim"; }
 	Mod+M repeat=false hotkey-overlay-title="Open Telegram" { spawn "Telegram"; }
 	Mod+E repeat=false hotkey-overlay-title="File manager" { spawn "thunar"; }

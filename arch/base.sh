@@ -3,38 +3,33 @@
 cwd=$(dirname "$(readlink -f "$0")")
 
 pkgs=(
-	wget
-	curl
-	fastfetch
-	jq
-	go-yq
-	# busybox
-	tealdeer # tldr
+	wget      # Network utility to retrieve files from the web
+	curl      # command line tool and library for transferring data with URLs
+	fastfetch # A feature-rich and performance oriented neofetch like system information tool
 
-	# gnome-disk-utility
+	jq       # Command-line JSON processor
+	go-yq    # Portable command-line YAML processor
+	tealdeer # A fast tldr client in Rust
 
-	fish # shell
-
-	neovim
-
-	gnome-keyring
+	fish   # A package manager for the fish shell
+	neovim # Fork of Vim aiming to improve user experience, plugins, and GUIs
 
 	# Keyboard
-	fcitx5
-	fcitx5-unikey
-	fcitx5-configtool
+	fcitx5            # Next generation of fcitx
+	fcitx5-unikey     # Unikey engine support for Fcitx5
+	fcitx5-configtool # Configuration Tool for Fcitx5
 
 	# Network
-	iw
-	wireless-regdb
+	iw             # nl80211 based CLI configuration utility for wireless devices
+	wireless-regdb # Central Regulatory Domain Database
 
 	# Firmware
-	fwupd
-	fwupd-efi
+	fwupd     # Simple daemon to allow session software to update firmware
+	fwupd-efi # EFI Application used by uefi-capsule plugin in fwupd
 
 	# Snapshot
-	snapper
-	snap-pac
+	snapper  # A tool for managing BTRFS and LVM snapshots
+	snap-pac # Pacman hooks that use snapper to create pre/post btrfs snapshots like openSUSE's YaST
 )
 
 cfgs=(

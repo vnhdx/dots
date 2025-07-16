@@ -46,4 +46,4 @@ main "$@"
 
 # systemd-boot
 # ls "$(sudo bootctl --print-esp-path)/loader/entries/*.conf"
-t options = ... loglevel=3 splash nowatchdog 8250.nr_uarts=0 8250.disable=1
+t options = ... loglevel=3 splash 8250.nr_uarts=0 8250.disable=1

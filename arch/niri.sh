@@ -69,6 +69,7 @@ _dm() {
 
 _install() {
 	_niri
+	_dm
 }
 
 # _uninstall() {

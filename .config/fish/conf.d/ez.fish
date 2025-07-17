@@ -174,6 +174,6 @@ function v -d nvim
     nvim $argv
 end
 
-function z -d zeditor
-    zeditor $argv
+function z -d zed
+    zed $argv
 end

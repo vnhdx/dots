@@ -1,12 +1,9 @@
 #!/usr/bin/bash
 
-unsplash() {
-	echo 'https://unsplash.it/1920/1080/?random'
-}
-
 bing() {
 	local base_url='https://bing.com'
-	local api="${base_url}/HPImageArchive.aspx?format=js&idx=0&n=1&mkt="
+	local idx=$(shuf -i 0-7 -n 1) # 0
+	local api="${base_url}/HPImageArchive.aspx?format=js&idx=${idx}&n=1&mkt="
 	local url=$(curl -s "${api}" | jq -r '.images[0].url')
 
 	echo "${base_url}/${url}"
@@ -15,6 +12,10 @@ bing() {
 	# local api='https://bing.biturl.top?resolution=UHD&format=json&mkt=random'
 	# local url=$(curl -s "${api}" | jq -r '.url')
 	# echo "${url}"
+}
+
+picsum() {
+	echo 'https://picsum.photos/2560/1440'
 }
 
 download() {
@@ -34,4 +35,4 @@ main() {
 	systemctl --user restart swaybg.service
 }
 
-main
+main "$*"

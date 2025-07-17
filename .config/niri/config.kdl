@@ -5,6 +5,10 @@
 
 environment {
 	GTK_THEME "Adwaita:dark"
+
+	MOZ_ENABLE_WAYLAND "1"
+	MOZ_WAYLAND "1"
+
 	QT_QPA_PLATFORM "wayland"
 	ELECTRON_OZONE_PLATFORM_HINT "auto"
 	OZONE_PLATFORM_HINT "auto"
@@ -317,10 +321,10 @@ prefer-no-csd
 // You can change the path where screenshots are saved.
 // A ~ at the front will beexpanded to the home directory.
 // The path is formatted with strftime(3) to give you the screenshot date and time.
-screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
+// screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
 
 // You can also set this to null to disable saving screenshots to disk.
-// screenshot-path null
+screenshot-path null
 
 // Animation settings.
 // The wiki explains how to configure individual animations:
@@ -394,9 +398,8 @@ binds {
 	Mod+T repeat=false hotkey-overlay-title="Open a Terminal" { spawn "footclient"; }
 	Mod+D hotkey-overlay-title="Run an Application" { spawn "fuzzel"; }
 	Mod+Alt+L hotkey-overlay-title="Lock the Screen" { spawn "swaylock"; }
-	// Mod+Shift+R hotkey-overlay-title="Reload Niri Config" { spawn "niri" "msg" "reload-config"; }
 
-	Mod+B repeat=false hotkey-overlay-title="Open Firefox" { spawn "firefox"; }
+	// Mod+B repeat=false hotkey-overlay-title="Open Firefox" { spawn "firefox"; }
 	Mod+Z repeat=false hotkey-overlay-title="Open Zed" { spawn "~/.local/bin/zed"; }
 	Mod+N repeat=false hotkey-overlay-title="Open NeoVim" { spawn "footclient" "-e" "nvim"; }
 	Mod+M repeat=false hotkey-overlay-title="Open Telegram" { spawn "Telegram"; }

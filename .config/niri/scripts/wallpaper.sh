@@ -22,7 +22,6 @@ download() {
 	local provider="$1"
 
 	if declare -f "${provider}" &>/dev/null; then
-		notify-send -u low -t 5000 "${provider}" 'Download the new wallpaper'
 		url=$(eval "${provider}")
 		curl -sLo ~/.cache/wallpaper.jpg $(eval "${provider}")
 	fi
@@ -33,6 +32,8 @@ main() {
 
 	download "${provider}"
 	systemctl --user restart swaybg.service
+
+	notify-send -u low -t 5000 "${provider}" 'Downloaded the new wallpaper'
 }
 
 main "$*"

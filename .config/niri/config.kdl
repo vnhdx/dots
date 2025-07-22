@@ -13,6 +13,10 @@ environment {
 	ELECTRON_OZONE_PLATFORM_HINT "auto"
 	OZONE_PLATFORM_HINT "auto"
 	DISPLAY ":0"
+
+	// GTK_IM_MODULE "fcitx"
+	QT_IM_MODULE "fcitx"
+	XMODIFIERS "@im=fcitx"
 }
 
 // Input device configuration.
@@ -408,6 +412,8 @@ binds {
 
 	Mod+Shift+N repeat=false hotkey-overlay-title="Pop a notification" { spawn "makoctl" "restore"; }
 	Mod+Shift+C repeat=false hotkey-overlay-title="Close all notifications" { spawn "makoctl" "dismiss"; }
+
+	Mod+Print repeat=false hotkey-overlay-title="Record screen" { spawn "~/.config/niri/scripts/record.sh"; }
 
 	// You can also use a shell. Do this if you need pipes, multiple commands, etc.
 	// Note: the entire command goes as a single argument in the end.

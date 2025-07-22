@@ -20,6 +20,7 @@ pkgs=(
 
 	libnotify     # Library for sending desktop notifications
 	brightnessctl # Lightweight brightness control tool
+	slurp         # Select a region in a Wayland compositor
 	wf-recorder   # Screen recorder for wlroots-based compositors such as sway
 	wl-clipboard  # Command-line copy/paste utilities for Wayland
 

@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+path="$*"
+echo "skeletonViewer => all json file in: ${path}"
+fd -e json . "${path}" | fzf --preview 'cat {} | jq --color-output .' | xargs -r java -jar ~/apps/skeletonViewer-4.2.40.jar

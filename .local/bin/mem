@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+apps="$@"
+
+get_total_mem() {
+	local app="$1"
+	ps aux | grep "${app}" | grep -v grep | awk '{sum += $6} END {print sum/1024}'
+}
+
+for app in ${apps}; do
+	echo "${app} => $(get_total_mem ${app}) MB"
+done

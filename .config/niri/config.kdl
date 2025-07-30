@@ -128,12 +128,12 @@ cursor {
 
 // Make workspaces four times smaller than normal in the overview.
 overview {
-	zoom 0.25
-	// backdrop-color "#777777
+	zoom 0.5
+	// backdrop-color "#777777"
 
-	// workspace-shadow {
-	//	off
-	// }
+	workspace-shadow {
+		// off
+	}
 }
 
 // Use a custom build of xwayland-satellite.
@@ -644,7 +644,7 @@ binds {
 	// It's a good idea to bind an escape hatch to toggle the inhibitor,
 	// so a buggy application can't hold your session hostage.
 	//
-	// The allow-inhibiting=false property can be applied to other binds as well,
+	// The allow-inhibiting=false property can be applied to other binds as wellon,
 	// which ensures niri always processes them, even when an inhibitor is active.
 	Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
@@ -655,4 +655,7 @@ binds {
 	// Powers off the monitors. To turn them back on, do any input like
 	// moving the mouse or pressing any other key.
 	Mod+Shift+P { power-off-monitors; }
+
+	// Powers on/off eDP-1
+	Mod+F12 repeat=false hotkey-overlay-title="Toogle eDP-1" { spawn "~/.config/niri/scripts/monitor.sh" ; }
 }

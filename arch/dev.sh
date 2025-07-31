@@ -10,13 +10,14 @@ pkgs=(
 	openssl  # The Open Source toolkit for Secure Sockets Layer and Transport Layer Security
 	protobuf # Protocol Buffers - Google's data interchange format
 
-	# mise # The front-end to your dev env
-
-	# zed  # A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter
-	# code # The Open Source build of Visual Studio Code (vscode) editor
+	# zed                    # A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter
+	# code                   # The Open Source build of Visual Studio Code (vscode) editor
+	# visual-studio-code-bin # Visual Studio Code (vscode): Editor for building and debugging modern web and cloud applications (official binary version)
 
 	bcompare # Beyond Compare 5: Compare, sync, and merge files and folders
 	# meld   # Compare files, directories and working copies
+
+	# mise # The front-end to your dev env
 
 	podman # Tool and library for running OCI-based containers in pods
 )
@@ -37,10 +38,6 @@ _install() {
 	curl -f https://zed.dev/install.sh | sh
 
 	cat <<EOF >>~/.bashrc
-
-# Go
-export GOBIN="\$HOME/.local/bin"
-EOF
 }
 
 main "$@"

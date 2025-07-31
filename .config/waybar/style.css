@@ -1,133 +1,137 @@
-@import "themes/mocha.css";
+/*
+ * https://github.com/Alexays/Waybar/wiki/Styling
+ * You can use env GTK_DEBUG=interactive waybar to inspect objects and find their CSS classes, experiment with live CSS styles, and lookup the current value of CSS properties.
+ */
+
+ @import "themes/mocha.css";
 
 * {
-	font-family: FantasqueSansMono Nerd Font;
-	font-size: 12px;
-	min-height: 0;
+    font-family: monospace;
+    font-size: 12px;
+    min-height: 0;
 }
 
 #waybar {
-	background: transparent;
-	color: @text;
-	margin: 5px 5px;
+    background: @surface0;
+    color: @text;
+    margin: 2px 2px;
 }
 
+/*
+ * Workspaces
+ */
 #workspaces {
-	border-radius: 1rem;
-	margin: 5px;
-	background-color: @surface0;
-	margin-left: 1rem;
+	/* border-bottom: 2px solid @mauve; */
 }
 
 #workspaces button {
-	color: @lavender;
-	border-radius: 1rem;
+	padding: 0 5px;
+    color: @lavender;
+	font-weight: bold;
 }
 
 #workspaces button.active {
-	color: @sky;
-	border-radius: 1rem;
+    color: @sky;
+	border-bottom: 3px solid @red;
 }
 
 #workspaces button:hover {
-	color: @sapphire;
-	border-radius: 1rem;
-}
-
-#custom-music,
-#tray,
-#backlight,
-#cpu,
-#memory,
-#clock,
-#network,
-#battery,
-#temperature,
-#pulseaudio,
-#custom-lock,
-#language,
-#cava,
-#power-profiles-daemon,
-#notification,
-#custom-power {
-	background-color: @surface0;
-	padding: 0.5rem 1rem;
-	margin: 5px 0;
-}
-
-#cpu {
-	border-radius: 1rem 0px 0px 1rem;
-	color: @pink;
-}
-
-#temperature {
-	color: @orange;
-}
-
-#clock {
-	color: @blue;
-	border-radius: 0px 1rem 1rem 0px;
-	margin-right: 1rem;
-}
-
-#power-profiles-daemon,
-#battery {
-	color: @green;
-}
-
-#battery.charging {
-	color: @green;
-}
-
-#battery.warning:not(.charging) {
-	color: @red;
-}
-
-#backlight {
-	color: @yellow;
-}
-
-#backlight,
-#power-profiles-daemon,
-#battery {
-	border-radius: 0;
-}
-
-#pulseaudio {
-	color: @maroon;
-	margin-left: 0;
-	padding-left: 5px;
-}
-
-#cava {
-	color: @pink;
-	border-radius: 1rem 0px 0px 1rem;
-	margin-left: 1rem;
-	margin-right: 0;
-	padding-right: 0;
-}
-
-#custom-music {
-	color: @mauve;
-	border-radius: 1rem;
-}
-
-#language {
-	border-radius: 1rem 0px 0px 1rem;
-	color: @lavender;
-}
-
-#custom-power {
-	margin-right: 1rem;
-	border-radius: 0px 1rem 1rem 0px;
-	color: @red;
-}
-
-#tray {
-	/* margin-right: 1rem; */
-	border-radius: 1rem 0px 0px 1rem;
+    background-color: @red;
 }
 
 #workspaces button.urgent {
-	color: @red;
+    color: @red;
+}
+
+/*
+ * Window
+ */
+#window label {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#pulseaudio,
+#power-profiles-daemon,
+#battery,
+#network,
+#clock,
+#tray,
+#custom-power,
+#notification,
+#custom-music {
+	margin: 2px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+#cpu {
+    border-radius: 1rem 0px 0px 1rem;
+    color: @pink;
+}
+
+#temperature {
+    color: @orange;
+}
+
+#clock {
+    color: @blue;
+    border-radius: 0px 1rem 1rem 0px;
+    margin-right: 1rem;
+}
+
+#power-profiles-daemon,
+#battery {
+    color: @green;
+}
+
+
+
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @red;
+}
+
+#backlight {
+    color: @yellow;
+}
+
+#pulseaudio {
+    /* color: @maroon; */
+}
+
+#cava {
+    color: @pink;
+    border-radius: 1rem 0px 0px 1rem;
+    margin-left: 1rem;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+#custom-music {
+    color: @mauve;
+    border-radius: 1rem;
+}
+
+#language {
+    border-radius: 1rem 0px 0px 1rem;
+    color: @lavender;
+}
+
+#custom-power {
+    margin-right: 1rem;
+    border-radius: 0px 1rem 1rem 0px;
+    color: @red;
+}
+
+#tray {
+    /* margin-right: 1rem; */
+    border-radius: 1rem 0px 0px 1rem;
 }

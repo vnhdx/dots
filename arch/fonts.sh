@@ -3,7 +3,7 @@
 cwd=$(dirname "$(readlink -f "$0")")
 
 pkgs=(
-	ttf-font-awesome # Iconic font designed for Bootstrap
+	# woff2-font-awesome # Iconic font designed for Bootstrap
 
 	noto-fonts # Google Noto TTF fonts
 	# noto-fonts-cjk   # Google Noto CJK fonts

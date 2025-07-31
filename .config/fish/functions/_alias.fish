@@ -26,9 +26,9 @@ function l -d lazygit
     lazygit $argv
 end
 
-function m -d mise
-    mise $argv
-end
+# function m -d mise
+#     mise $argv
+# end
 
 function t -d terrafrom
     terraform $argv
@@ -42,6 +42,6 @@ function v -d nvim
     nvim $argv
 end
 
-function z -d zed
-    zed $argv
-end
+# function z -d zed
+#     zed $argv
+# end

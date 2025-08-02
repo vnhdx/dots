@@ -4,8 +4,6 @@
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
 
 environment {
-	GTK_THEME "Adwaita:dark"
-
 	MOZ_ENABLE_WAYLAND "1"
 	MOZ_WAYLAND "1"
 
@@ -13,10 +11,6 @@ environment {
 	ELECTRON_OZONE_PLATFORM_HINT "auto"
 	OZONE_PLATFORM_HINT "auto"
 	DISPLAY ":0"
-
-	// GTK_IM_MODULE "fcitx"
-	QT_IM_MODULE "fcitx"
-	XMODIFIERS "@im=fcitx"
 }
 
 // Input device configuration.
@@ -355,12 +349,17 @@ window-rule {
 	default-column-width {}
 }
 
-// Open the Firefox picture-in-picture player as floating by default.
+// Floating windows
 window-rule {
+	// Open the Firefox picture-in-picture player as floating by default.
 	// This app-id regular expression will work for both:
 	// - host Firefox (app-id is "firefox")
 	// - Flatpak Firefox (app-id is "org.mozilla.firefox")
 	match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+
+	// Thunar
+	match app-id="thunar"
+
 	open-floating true
 }
 

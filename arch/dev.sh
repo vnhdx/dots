@@ -5,6 +5,7 @@ cwd=$(dirname "$(readlink -f "$0")")
 pkgs=(
 	git      # the fast distributed version control system
 	lazygit  # Simple terminal UI for git commands
+	tmux     # Terminal multiplexer
 	bat      # Cat clone with syntax highlighting and git integration
 	make     # GNU make utility to maintain groups of programs
 	openssl  # The Open Source toolkit for Secure Sockets Layer and Transport Layer Security

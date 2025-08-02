@@ -5,6 +5,9 @@ cwd=$(dirname "$(readlink -f "$0")")
 pkgs=(
 	# Message
 	telegram-desktop # Official Telegram Desktop client
+	# pidgin
+	# weechat
+	# ferdium
 
 	# Email
 	thunderbird # Standalone mail and news reader from mozilla.org

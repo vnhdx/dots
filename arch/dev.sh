@@ -26,6 +26,7 @@ pkgs=(
 cfgs=(
 	containers
 	lazygit
+	tmux
 	zed
 )
 
@@ -38,7 +39,10 @@ _install() {
 	# Install zed via the install script instead of the package manager
 	curl -f https://zed.dev/install.sh | sh
 
-	cat <<EOF >>~/.bashrc
+	# Tmux
+	git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+	~/.config/tmux/plugins/tpm/tpm
+	~/.config/tmux/plugins/tpm/bin/install_plugins
 }
 
 main "$@"

@@ -30,13 +30,13 @@ end
 #     mise $argv
 # end
 
-function t -d terrafrom
-    terraform $argv
-end
+# function t -d terrafrom
+#     terraform $argv
+# end
 
-function tm -d tmux
-    tmux $argv
-end
+# function tm -d tmux
+#     tmux $argv
+# end
 
 function v -d nvim
     nvim $argv

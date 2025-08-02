@@ -1,6 +1,6 @@
 [user]
-	email = thanh.vinh@hotmail.com
 	name = Vinh
+	email = thanh.vinh@hotmail.com
 [core]
 	autocrlf = false
 	eol = lf

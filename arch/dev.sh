@@ -24,6 +24,7 @@ pkgs=(
 )
 
 cfgs=(
+	git
 	containers
 	lazygit
 	tmux

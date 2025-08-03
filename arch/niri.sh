@@ -35,6 +35,10 @@ pkgs=(
 	gvfs                  # Virtual filesystem implementation for GIO
 
 	ly # TUI display manager
+
+	# X11 compositors
+	# cage  # A kiosk compositor for Wayland
+	# labwc # stacking wayland compositor with look and feel from openbox
 )
 
 cfgs=(

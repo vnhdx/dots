@@ -79,7 +79,7 @@ input {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-/-output "eDP-1" {
+output "eDP-1" {
 	// Uncomment this line to disable this output.
 	// off
 
@@ -93,7 +93,7 @@ input {
 	mode "1920x1080@60.008"
 
 	// You can use integer or fractional scale, for example use 1.5 for 150% scale.
-	scale 1.25
+	scale 1
 
 	// Transform allows to rotate the output counter-clockwise, valid values are:
 	// normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -360,6 +360,14 @@ window-rule {
 	// Thunar
 	match app-id="thunar"
 
+	open-floating true
+}
+
+// Flutter apps
+window-rule {
+	match app-id=r#"com\..*"#
+	default-column-width { fixed 440; }
+	default-window-height { fixed 956; }
 	open-floating true
 }
 

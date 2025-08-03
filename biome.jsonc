@@ -13,7 +13,7 @@
 	},
 	"formatter": {
 		"enabled": true,
-		"useEditorconfig": true,
+		"useEditorconfig": true
 	},
 	"linter": {
 		"enabled": true,

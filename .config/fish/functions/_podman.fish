@@ -1,19 +1,19 @@
-function p -d podman
-    podman $argv
+# function p -d podman
+#     podman $argv
+# end
+
+function pms -d 'podman ps'
+    podman ps $argv
 end
 
-function pe -d 'podman exec -it'
-    podman exec -it $argv
-end
-
-function pi -d 'podman images'
+function pmi -d 'podman image'
     podman images $argv
 end
 
-function pp -d 'podman image prune -f'
-    podman image prune -f $argv
+function pme -d 'podman exec'
+    podman exec $argv
 end
 
-function pr -d 'podman run -it --rm'
-    podman run -it --rm $argv
+function pmr -d 'podman run'
+    podman run $argv
 end

@@ -7,7 +7,13 @@
 vim.o.shell = "fish"
 
 -- Tab
-vim.o.expandtab = false -- Use tabs instead of spaces
-vim.o.tabstop = 4 -- Number of spaces a tab is equal to
-vim.o.shiftwidth = 4 -- Number of spaces to use for autoindent
-vim.o.softtabstop = 4 -- Number of spaces a tab is equal to in insert mode
+-- vim.o.expandtab = false -- Use tabs instead of spaces
+-- vim.o.tabstop = 4 -- Number of spaces a tab is equal to
+-- vim.o.shiftwidth = 4 -- Number of spaces to use for autoindent
+-- vim.o.softtabstop = 4 -- Number of spaces a tab is equal to in insert mode
+
+-- Neovide
+if vim.g.neovide then
+  vim.o.guifont = "FiraCode Nerd Font:h11"
+  -- vim.g.neovide_scale_factor = 0.9
+end

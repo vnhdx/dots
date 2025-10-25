@@ -41,7 +41,7 @@ input {
 		// drag false
 		// drag-lock
 		// natural-scroll
-		// accel-speed 0.2
+		accel-speed 0.8
 		// accel-profile "flat"
 		// scroll-method "two-finger"
 		disabled-on-external-mouse
@@ -79,7 +79,7 @@ input {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-output "eDP-1" {
+/-ouput "eDP-1" {
 	// Uncomment this line to disable this output.
 	// off
 
@@ -307,7 +307,7 @@ spawn-at-startup "foot" "-s"
 spawn-at-startup "fcitx5" "-d"
 
 // Xwayland
-spawn-at-startup "xwayland-satellite"
+// spawn-at-startup "xwayland-satellite"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -357,8 +357,12 @@ window-rule {
 	// - Flatpak Firefox (app-id is "org.mozilla.firefox")
 	match app-id=r#"firefox$"# title="^Picture-in-Picture$"
 
-	// Thunar
-	match app-id="thunar"
+	match app-id="thunar" 
+	match app-id="org.pulseaudio.pavucontrol"
+	match app-id="org.telegram.desktop"
+	match app-id="Lark"
+	match app-id="org.inkscape.Inkscape"
+	match title="Media viewer"
 
 	open-floating true
 }
@@ -366,7 +370,9 @@ window-rule {
 // Flutter apps
 window-rule {
 	match app-id=r#"com\..*"#
-	default-column-width { fixed 440; }
+	match app-id="scrcpy"
+	match app-id="Waydroid"
+	default-column-width { fixed 440; } 
 	default-window-height { fixed 956; }
 	open-floating true
 }

@@ -7,6 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+	"auto_update": false,
 	"agent": {
 		"default_profile": "write",
 		"default_model": {
@@ -60,22 +61,14 @@
 
 	"languages": {
 		"JavaScript": {
-			"formatter": {
-				"external": {
-					"command": "prettier",
-					"arguments": ["--stdin-filepath", "{buffer_path}"]
-				}
-			}
+			"formatter": { "language_server": { "name": "biome" } }
 		},
-		// "JavaScript": {
-		// 	"formatter": { "language_server": { "name": "biome" } }
-		// },
-		// "TypeScript": {
-		// 	"formatter": { "language_server": { "name": "biome" } }
-		// },
-		// "TSX": { "formatter": { "language_server": { "name": "biome" } } },
-		// "JSON": { "formatter": { "language_server": { "name": "biome" } } },
-		// "JSONC": { "formatter": { "language_server": { "name": "biome" } } },
-		// "CSS": { "formatter": { "language_server": { "name": "biome" } } }
+		"TypeScript": {
+			"formatter": { "language_server": { "name": "biome" } }
+		},
+		"TSX": { "formatter": { "language_server": { "name": "biome" } } },
+		"JSON": { "formatter": { "language_server": { "name": "biome" } } },
+		"JSONC": { "formatter": { "language_server": { "name": "biome" } } },
+		"CSS": { "formatter": { "language_server": { "name": "biome" } } }
 	}
 }

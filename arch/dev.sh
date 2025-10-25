@@ -21,6 +21,8 @@ pkgs=(
 	# mise # The front-end to your dev env
 
 	podman # Tool and library for running OCI-based containers in pods
+
+	sqlitebrowser # A light GUI editor for SQLite databases, built on top of Qt
 )
 
 cfgs=(

@@ -90,9 +90,12 @@
 }
 
 
-
 #battery.charging {
     color: @green;
+}
+
+#battery.battery-low {
+    color: @red;
 }
 
 #battery.warning:not(.charging) {

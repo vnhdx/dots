@@ -3,7 +3,11 @@
 cwd=$(dirname "$(readlink -f "$0")")
 
 pkgs=(
-	niri
+	wayfire
+	# wf-shell # GTK3-based panel for the Wayfire compositor
+
+	wlr-randr # Utility to manage outputs of a Wayland compositor
+	lswt      # List Wayland toplevels
 
 	fuzzel                 # an application launcher
 	foot                   # a terminal emulator wezterm, alacritty, kitty...
@@ -51,14 +55,49 @@ cfgs=(
 	gtk-3.0
 )
 
-# Niri session with systemd
-# https://github.com/YaLTeR/niri/wiki/Example-systemd-Setup
-_niri() {
-	systemctl --user add-wants niri.service \
-		~/.config/niri/systemd/swaybg.service \
-		~/.config/niri/systemd/swaybg.service
+_wayfire() {
+	# Environment
+	cat <<EOF >>~/.bashrc
 
-	systemctl --user daemon-reload
+# Wayland
+export MOZ_ENABLE_WAYLAND=1
+export MOZ_WAYLAND=1
+
+export QT_QPA_PLATFORM=wayland
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+export OZONE_PLATFORM_HINT=auto
+# export DISPLAY=
+
+# Theme
+export GTK_THEME=Adwaita:dark
+# XCURSOR_THEME=Adwaita
+# ICON_THEME=Adwaita
+export QT_QPA_PLATFORMTHEME=qt6ct
+# QT_STYLE_OVERRIDE=GTK+
+
+export TERMINAL=footclient
+export BROWSER=firefox # firefox chromium
+export EDITOR=nvim
+
+# Fcitx
+# GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+# Bin
+export PATH="$HOME/.local/bin:$PATH"
+
+# Git
+# GIT_CONFIG=$HOME/.config/git/config
+
+# Go
+# GOBIN="$HOME/.local/bin"
+
+# Flutter
+export PATH="$HOME/.pub-cache/bin:$PATH"
+export CHROME_EXECUTABLE=/usr/bin/firefox
+EOF
+
 }
 
 # Display manager
@@ -71,7 +110,7 @@ _dm() {
 }
 
 _install() {
-	_niri
+	_wayfire
 	_dm
 }
 

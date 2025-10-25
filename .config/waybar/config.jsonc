@@ -7,8 +7,8 @@
 	// "width": 1280, // Waybar width
 	"spacing": 4, // Gaps between modules (4px)
 	// Choose the order of the modules
-	"modules-left": ["niri/workspaces", "custom/media"],
-	"modules-center": ["niri/window"],
+	"modules-left": ["wlr/workspaces", "custom/media", "wlr/window"],
+	"modules-center": ["wlr/taskbar"],
 	"modules-right": [
 		// "keyboard-state",
 		"cpu",
@@ -18,11 +18,19 @@
 		"pulseaudio",
 		"power-profiles-daemon",
 		"battery",
-		"network",
+		// "network",
 		"clock",
 		"tray",
 		"custom/power"
 	],
+	"wlr/taskbar": {
+		"format": "{icon} {name}",
+		"icon-size": 12,
+		"tooltip-format": "{title}",
+		"on-click": "activate",
+		"on-click-middle": "close",
+		"all-outputs": true
+	},
 	// Modules configuration
 	"keyboard-state": {
 		"numlock": true,

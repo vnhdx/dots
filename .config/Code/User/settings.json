@@ -1,0 +1,19 @@
+{
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": "off"
+    },
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "redhat.telemetry.enabled": false,
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.iconTheme": "vscode-icons"
+}

@@ -3,7 +3,7 @@ return {
     "ejrichards/mise.nvim",
     opts = {
       -- Executable to run
-      run = vim.fn.expand("~") .. "/.local/bin/mise",
+      -- run = vim.fn.expand("~") .. "/.local/bin/mise",
       -- Args for the executable, set to "env --json --quiet" to ignore mise warnings
       args = "env --json",
       -- Set to override the base PATH

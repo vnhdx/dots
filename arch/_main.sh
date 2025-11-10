@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# Package will be installed
+declare -a pkgs
+
+# Config will be copied to ~/.config
+declare -a cfgs
+
+cwd=$(dirname "$(readlink -f "$0")")
+
 source "${cwd}/_pacman.sh"
 
 usage() {

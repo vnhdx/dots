@@ -11,7 +11,7 @@ cfgs=(
 	river
 )
 
-_install() {
+post_install() {
 	# Wayland sessions
 	mkdir -p ~/.local/share/wayland-sessions
 	cat <<EOF >~/.local/share/wayland-sessions/river.desktop
@@ -28,11 +28,10 @@ _install() {
 EOF
 }
 
-_uninstall() {
+post_uninstall() {
 	rm ~/.local/share/wayland-sessions/river.desktop
 }
 
-source "${cwd}/_yay.sh"
-source "${cwd}/../bin/_main.sh"
+source "${cwd}/_main.sh"
 
 main "$@"

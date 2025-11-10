@@ -5,7 +5,7 @@ cwd=$(dirname "$(readlink -f "$0")")
 pkgs=(
 	# woff2-font-awesome # Iconic font designed for Bootstrap
 
-	noto-fonts # Google Noto TTF fonts
+	# noto-fonts # Google Noto TTF fonts
 	# noto-fonts-cjk   # Google Noto CJK fonts
 	# noto-fonts-emoji # Google Noto Color Emoji font
 
@@ -18,7 +18,6 @@ pkgs=(
 	ttf-firacode-nerd # Patched font Fira (Fura) Code from nerd fonts library
 )
 
-source "${cwd}/_yay.sh"
-source "${cwd}/../bin/_main.sh"
+source "${cwd}/_main.sh"
 
 main "$@"

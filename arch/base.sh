@@ -3,12 +3,13 @@
 cwd=$(dirname "$(readlink -f "$0")")
 
 pkgs=(
+	firefox   # Fast, Private & Safe Web Browser
 	wget      # Network utility to retrieve files from the web
 	curl      # command line tool and library for transferring data with URLs
 	fastfetch # A feature-rich and performance oriented neofetch like system information tool
+	less      # A terminal based program for viewing text files
 
 	jq       # Command-line JSON processor
-	go-yq    # Portable command-line YAML processor
 	tealdeer # A fast tldr client in Rust
 
 	fish   # A package manager for the fish shell
@@ -16,10 +17,12 @@ pkgs=(
 
 	# Keyboard
 	fcitx5            # Next generation of fcitx
+	fcitx5-gtk        # Fcitx5 gtk im module and glib based dbus client library
+	fcitx5-qt         # Fcitx5 Qt Library (Qt5 & Qt6 integrations)
 	fcitx5-unikey     # Unikey engine support for Fcitx5
 	fcitx5-configtool # Configuration Tool for Fcitx5
 
-	# Network
+	# Wireless
 	iw             # nl80211 based CLI configuration utility for wireless devices
 	wireless-regdb # Central Regulatory Domain Database
 
@@ -37,7 +40,7 @@ cfgs=(
 	fcitx5
 )
 
-_install() {
+post_install() {
 	# Snapshot
 	sudo snapper -c root create-config /
 	sudo systemctl disable snapper-timeline.timer
@@ -47,7 +50,7 @@ _install() {
 	# sudo timedatectl set-local-rtc 0
 
 	# Environment
-	cat <<EOF >>~/.bashrc
+	cat <<EOF >>~/.bash_profile
 
 # export QT_QPA_PLATFORMTHEME=qt6ct
 
@@ -62,7 +65,6 @@ export PATH="\$HOME/.local/bin:\$PATH"
 EOF
 }
 
-source "${cwd}/_yay.sh"
-source "${cwd}/../bin/_main.sh"
+source "${cwd}/_main.sh"
 
 main "$@"

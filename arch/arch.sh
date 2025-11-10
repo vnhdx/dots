@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 features=(
-	# base
-	# fonts
+	base
+	fonts
 
 	# DE
 	# xfce
@@ -11,24 +11,24 @@ features=(
 	# WM
 	# niri
 	# hyprland
+	wayfire
 
-	# monitoring
+	monitoring
 
-	# dev
-	# nvim
-	# golang
-	# flutter
+	dev
+	nvim
+	flutter
 
 	# perf
 
-	# office
+	office
 )
 
 for feature in "${features[@]}"; do
 	echo "${feature} => install"
 
 	if [ -f "${feature}.sh" ]; then
-		bash "${feature}.sh"
+		bash "arch/${feature}.sh"
 	else
 		echo "warn => ${feature}.sh not found"
 	fi

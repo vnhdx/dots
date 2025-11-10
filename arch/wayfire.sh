@@ -46,7 +46,6 @@ pkgs=(
 )
 
 cfgs=(
-	niri
 	foot
 	fuzzel
 	waybar
@@ -57,7 +56,7 @@ cfgs=(
 
 _wayfire() {
 	# Environment
-	cat <<EOF >>~/.bashrc
+	cat <<EOF >>~/.bash_profile
 
 # Wayland
 export MOZ_ENABLE_WAYLAND=1
@@ -109,15 +108,14 @@ _dm() {
 	sudo systemctl disable getty@tty2.service
 }
 
-_install() {
+post_install() {
 	_wayfire
 	_dm
 }
 
-# _uninstall() {
+# post_uninstall() {
 # }
 
-source "${cwd}/_yay.sh"
-source "${cwd}/../bin/_main.sh"
+source "${cwd}/_main.sh"
 
 main "$@"

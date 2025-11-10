@@ -20,9 +20,6 @@ pkgs=(
 	# onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
 )
 
-source "${cwd}/_yay.sh"
-source "${cwd}/../bin/_main.sh"
+source "${cwd}/_main.sh"
 
 main "$@"
-
-# ${cwd}/../bin/onlyoffice.sh

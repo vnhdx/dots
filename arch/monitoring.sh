@@ -7,6 +7,8 @@ pkgs=(
 	btop # A monitor of system resources, bpytop ported to C++
 	# glances # CLI curses-based monitoring tool
 
+	power-profiles-daemon # Makes power profiles handling available over D-Bus
+
 	gdu      # Fast disk usage analyzer
 	powertop # A tool to diagnose issues with power consumption and power management
 
@@ -24,7 +26,6 @@ cfgs=(
 	htop
 )
 
-source "${cwd}/_yay.sh"
-source "${cwd}/../bin/_main.sh"
+source "${cwd}/_main.sh"
 
 main "$@"

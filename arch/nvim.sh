@@ -15,7 +15,6 @@ cfgs=(
 	nvim
 )
 
-source "${cwd}/_yay.sh"
-source "${cwd}/../bin/_main.sh"
+source "${cwd}/_main.sh"
 
 main "$@"

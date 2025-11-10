@@ -71,9 +71,9 @@ cfgs=(
 	gtk-3.0
 )
 
-_install() {
+post_install() {
 	# Environment
-	cat <<EOF >>~/.bashrc
+	cat <<EOF >>~/.bash_profile
 
 # Hyprland
 # export NIXOS_OZONE_WL=1
@@ -83,7 +83,6 @@ _install() {
 EOF
 }
 
-source "${cwd}/_yay.sh"
-source "${cwd}/../bin/_main.sh"
+source "${cwd}/_main.sh"
 
 main "$@"

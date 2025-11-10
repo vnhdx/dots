@@ -26,7 +26,10 @@ cfgs=(
 
 )
 
-source "${cwd}/_yay.sh"
-source "${cwd}/../bin/_main.sh"
-j
+post_install() {
+	cp -r .local/share/mc ~/.local/share/
+}
+
+source "${cwd}/_main.sh"
+
 main "$@"

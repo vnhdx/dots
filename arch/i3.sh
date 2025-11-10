@@ -21,13 +21,12 @@ _dm() {
 	sudo systemctl disable getty@tty2.service
 }
 
-# _install() {
+post_install() {
+}
+
+# post_uninstall() {
 # }
 
-# _uninstall() {
-# }
-
-source "${cwd}/_yay.sh"
-source "${cwd}/../bin/_main.sh"
+source "${cwd}/_main.sh"
 
 main "$@"

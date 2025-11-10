@@ -16,13 +16,14 @@ pkgs=(
 	# android-sdk-cmdline-tools-latest
 )
 
-_install() {
+post_install() {
+	eval "$(mise activate)"
+
 	# Flutter
-	# mise use -g flutter
-	# flutter doctor --android-licenses
+	mise use -g flutter
 
 	# Java SDK
-	# mise use -g java@lts
+	mise use -g java@18
 
 	# Android SDK
 	mise use -g android-sdk
@@ -30,7 +31,7 @@ _install() {
 	# sdkmanager "platform-tools" "platforms;android-36" "build-tools;36.0.0"
 
 	# Environment
-	cat <<EOF >>~/.bashrc
+	cat <<EOF >>~/.bash_profile
 
 # Flutter
 export PATH="\$HOME/.pub-cache/bin:\$PATH"
@@ -38,7 +39,6 @@ export CHROME_EXECUTABLE=/usr/bin/firefox
 EOF
 }
 
-source "${cwd}/_yay.sh"
-source "${cwd}/../bin/_main.sh"
+source "${cwd}/_main.sh"
 
 main "$@"

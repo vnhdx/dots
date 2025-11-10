@@ -3,7 +3,7 @@
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    ~/.local/bin/mise activate fish | source
+    mise activate fish | source
 
 
 end

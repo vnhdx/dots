@@ -16,11 +16,12 @@ pkgs=(
 	visual-studio-code-bin # Visual Studio Code (vscode): Editor for building and debugging modern web and cloud applications (official binary version)
 	# code                 # The Open Source build of Visual Studio Code (vscode) editor
 
-	bcompare      # Beyond Compare 5: Compare, sync, and merge files and folders
-	meld          # Compare files, directories and working copies
-	mise          # The front-end to your dev env
-	podman        # Tool and library for running OCI-based containers in pods
-	sqlitebrowser # A light GUI editor for SQLite databases, built on top of Qt
+	bcompare         # Beyond Compare 5: Compare, sync, and merge files and folders
+	meld             # Compare files, directories and working copies
+	mise             # The front-end to your dev env
+	podman           # Tool and library for running OCI-based containers in pods
+	sqlitestudio-bin # A free, open source, multi-platform SQLite database manager
+	# sqlitebrowser    # A light GUI editor for SQLite databases, built on top of Qt
 )
 
 cfgs=(

@@ -17,7 +17,7 @@ pkgs=(
 	swayidle               # an idle management daemon for Wayland
 	waybar                 # a suggested Wayland customizable desktop bar
 	xwayland-satellite     # for running X11 apps in XWayland
-	xdg-desktop-portal-gtk # a suggested XDG desktop portal
+	xdg-desktop-portal-wlr # xdg-desktop-portal backend for wlroots
 
 	# xdg-desktop-portal-gnome # a XDG desktop portal required for screencasting
 	# org.freedesktop.secrets # for apps to rely on secrets portal
@@ -25,6 +25,7 @@ pkgs=(
 	libnotify     # Library for sending desktop notifications
 	brightnessctl # Lightweight brightness control tool
 	slurp         # Select a region in a Wayland compositor
+	grim          # Screenshot utility for Wayland
 	wf-recorder   # Screen recorder for wlroots-based compositors such as sway
 	wl-clipboard  # Command-line copy/paste utilities for Wayland
 

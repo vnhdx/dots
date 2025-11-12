@@ -8,9 +8,9 @@ pkgs=(
 	# xz    # Library and command line tools for XZ and LZMA compressed files
 	# libglu1-mesa
 
-	cmake # A cross-platform open-source make system
 	clang # C language family frontend for LLVM
-	ninja # Small build system with a focus on speed
+	# cmake # A cross-platform open-source make system
+	# ninja # Small build system with a focus on speed
 
 	# jdk-openjdk
 	# android-sdk-cmdline-tools-latest
@@ -21,6 +21,9 @@ post_install() {
 
 	# Flutter
 	mise use -g flutter
+
+	# Linux platform
+	mise use -g cmake ninja
 
 	# Java SDK
 	mise use -g java@18

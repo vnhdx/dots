@@ -15,9 +15,12 @@ pkgs=(
 	# evolution # Manage your email, contacts and schedule
 
 	# Docs
-	libreoffice-fresh # LibreOffice branch which contains new features and program enhancements
+	# libreoffice-fresh # LibreOffice branch which contains new features and program enhancements
 	# libreoffice-still # LibreOffice maintenance branch
-	# onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
+	onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
+
+	# Remote
+	wayvnc
 )
 
 source "${cwd}/_main.sh"

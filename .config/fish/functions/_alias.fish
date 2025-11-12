@@ -42,6 +42,6 @@ function v -d nvim
     nvim $argv
 end
 
-# function z -d zed
-#     zed $argv
-# end
+function zed -d zeditor
+    zed $argv
+end

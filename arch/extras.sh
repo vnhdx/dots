@@ -11,6 +11,10 @@ pkgs=(
 	seahorse      # GNOME application for managing PGP keys
 	bind          # A complete, highly portable implementation of the DNS protocol
 
+	zip   # Compressor/archiver for creating and modifying zipfiles
+	unzip # For extracting and viewing files in .zip archives
+	unrar # The RAR uncompression program
+
 	# busybox            # Utilities for rescue and embedded systems
 	# gnome-disk-utility # Disk Management Utility for GNOME
 

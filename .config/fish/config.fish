@@ -5,5 +5,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     mise activate fish | source
 
+    # Zoxide aka cd
+    zoxide init fish | source
 
 end

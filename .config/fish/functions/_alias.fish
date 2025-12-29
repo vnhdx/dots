@@ -6,8 +6,16 @@ function b -d btop
     btop $argv
 end
 
-function c -d 'xclip to clipboard'
-    xclip -selection clipboard $argv
+function c -d wl-copy
+    wl-copy $argv
+end
+
+# function cd -d zoxide
+#     zoxide $argv
+# end
+
+function p -d wl-paste
+    wl-paste $argv
 end
 
 function f -d fastfetch
@@ -26,22 +34,14 @@ function l -d lazygit
     lazygit $argv
 end
 
-# function m -d mise
-#     mise $argv
-# end
-
-# function t -d terrafrom
-#     terraform $argv
-# end
-
-# function tm -d tmux
-#     tmux $argv
-# end
+function ll -d eza
+    eza --group --header --group-directories-first --long --git $argv
+end
 
 function v -d nvim
     nvim $argv
 end
 
-function zed -d zeditor
-    zed $argv
-end
+# function zed -d zeditor
+#     zeditor $argv
+# end

@@ -16,7 +16,6 @@ pkgs=(
 	swaylock               # a suggested Wayland screen locker
 	swayidle               # an idle management daemon for Wayland
 	waybar                 # a suggested Wayland customizable desktop bar
-	xwayland-satellite     # for running X11 apps in XWayland
 	xdg-desktop-portal-wlr # xdg-desktop-portal backend for wlroots
 
 	# xdg-desktop-portal-gnome # a XDG desktop portal required for screencasting

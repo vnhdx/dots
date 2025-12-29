@@ -14,9 +14,9 @@ pkgs=(
 	# ttf-roboto-mono-nerd # Patched font Roboto Mono from nerd fonts library
 	# ttf-fira-sans        # Mozilla's sans-serif typeface designed for Firefox OS
 
-	# inter-font        # A typeface specially designed for user interfaces
-	# ttf-ibm-plex      # IBM Plex Mono, Sans, and Serif
-	# ttf-firacode-nerd # Patched font Fira (Fura) Code from nerd fonts library
+	inter-font        # A typeface specially designed for user interfaces
+	ttf-firacode-nerd # Patched font Fira (Fura) Code from nerd fonts library
+	# otf-firamono-nerd # Patched font Fira (Fura) Code from nerd fonts library
 
 	#---------------------------------------------------------
 	# Theme

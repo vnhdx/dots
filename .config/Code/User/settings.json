@@ -15,5 +15,7 @@
     "redhat.telemetry.enabled": false,
     "terminal.integrated.defaultProfile.linux": "fish",
     "git.openRepositoryInParentFolders": "never",
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "vim.useSystemClipboard": true,
+    "git.suggestSmartCommit": false
 }

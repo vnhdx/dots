@@ -12,9 +12,9 @@ pkgs=(
 	# protobuf # Protocol Buffers - Google's data interchange format
 
 	mise                   # The front-end to your dev env
-	zed                    # A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter
 	visual-studio-code-bin # Visual Studio Code (vscode): Editor for building and debugging modern web and cloud applications (official binary version)
 	# code                 # The Open Source build of Visual Studio Code (vscode) editor
+	# zed                  # A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter
 
 	bcompare         # Beyond Compare 5: Compare, sync, and merge files and folders
 	meld             # Compare files, directories and working copies
@@ -34,7 +34,7 @@ cfgs=(
 
 post_install() {
 	# Install zed via the install script instead of the package manager
-	# curl -f https://zed.dev/install.sh | sh
+	curl -f https://zed.dev/install.sh | sh
 
 	# Tmux
 	git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm

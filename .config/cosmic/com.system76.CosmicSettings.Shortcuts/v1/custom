@@ -1,0 +1,53 @@
+{
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "c",
+        description: Some("Code"),
+    ): Spawn("code"),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Return",
+    ): System(Terminal),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "t",
+    ): Disable,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "s",
+    ): Disable,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "z",
+        description: Some("Zed"),
+    ): Spawn("zed"),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "t",
+    ): ToggleSticky,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "slash",
+    ): Disable,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "n",
+    ): Spawn("footclient -e nvim"),
+}

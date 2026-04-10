@@ -2,139 +2,69 @@
  * https://github.com/Alexays/Waybar/wiki/Styling
  * You can use env GTK_DEBUG=interactive waybar to inspect objects and find their CSS classes, experiment with live CSS styles, and lookup the current value of CSS properties.
  */
-
- @import "themes/mocha.css";
+@import "themes/mocha.css";
 
 * {
-    font-family: monospace;
-    font-size: 12px;
-    min-height: 0;
+	font-family: "monospace";
+	font-size: 14px;
+	min-height: 0;
+	border: none;
+	border-radius: 0;
 }
 
-#waybar {
-    background: @surface0;
-    color: @text;
-    margin: 2px 2px;
-}
+#waybar { background: @surface0; color: @text; }
 
 /*
  * Workspaces
  */
-#workspaces {
-	/* border-bottom: 2px solid @mauve; */
-}
+#workspaces button { padding: 0 5px; color: @lavender; font-weight: bold; border-bottom: 3px solid transparent; }
+#workspaces button.active { color: @sky; border-bottom: 3px solid @red; }
+#workspaces button.urgent { color: @red; }
+#workspaces button:hover { background: @surface1; color: @red; box-shadow: inherit; text-shadow: inherit; }
 
-#workspaces button {
-	padding: 0 5px;
-    color: @lavender;
-	font-weight: bold;
-}
+/* * Individual Module Colors
+ */
+#cpu                    { color: @pink; }
+#temperature            { color: @orange; }
+#backlight              { color: @yellow; }
+#battery                { color: @green; }
+#clock                  { color: @blue; margin-right: 5px; }
+#custom-music           { color: @mauve; }
+#custom-notification    { color: @yellow; } /* Cho swaync */
+#custom-power           { color: @red; padding-right: 15px; }
 
-#workspaces button.active {
-    color: @sky;
-	border-bottom: 3px solid @red;
-}
-
-#workspaces button:hover {
-    background-color: @red;
-}
-
-#workspaces button.urgent {
-    color: @red;
-}
+#battery.warning:not(.charging),
+#battery.critical:not(.charging) { color: @red; animation: blink 0.5s steps(5, start) infinite; }
 
 /*
- * Window
+ * * Reusable Module Class
  */
-#window label {
-	font-weight: bold;
-	font-size: 14px;
+.module { margin: 2px 0; padding: 0 8px; transition: all 0.3s ease; }
+
+/*
+ * Border Radius Logic
+.modules-right > widget:first-child > #workspaces,
+.modules-right > widget:first-child > .module {
+	border-radius: 1rem 0 0 1rem;
 }
 
-#cpu,
-#memory,
-#temperature,
-#backlight,
-#pulseaudio,
-#power-profiles-daemon,
-#battery,
-#network,
-#clock,
-#tray,
-#custom-power,
-#notification,
-#custom-music {
-	margin: 2px;
-	padding-left: 4px;
-	padding-right: 4px;
+.modules-right > widget:last-child > #workspaces,
+.modules-right > widget:last-child > .module {
+	border-radius: 0 1rem 1rem 0;
 }
+*/
 
-#cpu {
-    border-radius: 1rem 0px 0px 1rem;
-    color: @pink;
-}
+/*
+ * Tray
+ */
+#tray { margin: 2px 5px; }
+#tray > .passive { -gtk-icon-effect: dim; }
+#tray > .needs-attention { -gtk-icon-effect: highlight; background-color: @red; }
 
-#temperature {
-    color: @orange;
-}
-
-#clock {
-    color: @blue;
-    border-radius: 0px 1rem 1rem 0px;
-    margin-right: 1rem;
-}
-
-#power-profiles-daemon,
-#battery {
-    color: @green;
-}
-
-
-#battery.charging {
-    color: @green;
-}
-
-#battery.battery-low {
-    color: @red;
-}
-
-#battery.warning:not(.charging) {
-    color: @red;
-}
-
-#backlight {
-    color: @yellow;
-}
-
-#pulseaudio {
-    /* color: @maroon; */
-}
-
-#cava {
-    color: @pink;
-    border-radius: 1rem 0px 0px 1rem;
-    margin-left: 1rem;
-    margin-right: 0;
-    padding-right: 0;
-}
-
-#custom-music {
-    color: @mauve;
-    border-radius: 1rem;
-}
-
-#language {
-    border-radius: 1rem 0px 0px 1rem;
-    color: @lavender;
-}
-
-#custom-power {
-    margin-right: 1rem;
-    border-radius: 0px 1rem 1rem 0px;
-    color: @red;
-}
-
-#tray {
-    /* margin-right: 1rem; */
-    border-radius: 1rem 0px 0px 1rem;
+/* Animation */
+@keyframes blink {
+	to {
+		background-color: rgba(243, 139, 168, 0.2);
+		color: @text;
+	}
 }

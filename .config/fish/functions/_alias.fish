@@ -11,7 +11,7 @@ function c -d wl-copy
 end
 
 # function cd -d zoxide
-#     zoxide $argv
+#     z $argv
 # end
 
 function p -d wl-paste
@@ -34,8 +34,13 @@ function l -d lazygit
     lazygit $argv
 end
 
+function ls -d eza
+    eza --icons --group-directories-first --git $argv
+end
+
 function ll -d eza
-    eza --group --header --group-directories-first --long --git $argv
+    # eza --group --header --group-directories-first --long --git $argv
+    eza --icons --group-directories-first --long --git $argv
 end
 
 function v -d nvim

@@ -1,0 +1,15 @@
+[
+    Home,
+    Documents,
+    Downloads,
+    Music,
+    Pictures,
+    Videos,
+    Path("/home/vinh/projects"),
+    Path("/home/vinh/projects/dots"),
+    Path("/home/vinh/projects/family-svc"),
+    Path("/home/vinh/projects/family"),
+    Path("/home/vinh/projects/hub"),
+    Path("/home/vinh/Applications"),
+    Path("/home/vinh/projects/defenser-x"),
+]

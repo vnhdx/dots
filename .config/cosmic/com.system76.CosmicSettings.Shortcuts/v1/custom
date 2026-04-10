@@ -3,9 +3,46 @@
         modifiers: [
             Super,
         ],
+    ): System(Launcher),
+    (
+        modifiers: [
+            Super,
+        ],
         key: "c",
-        description: Some("Code"),
-    ): Spawn("code"),
+        description: Some("Antigravity"),
+    ): Spawn("antigravity"),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "b",
+    ): System(WebBrowser),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "s",
+    ): Disable,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "n",
+        description: Some("Neovim"),
+    ): Spawn("neovide"),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "b",
+    ): Disable,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "slash",
+    ): Disable,
     (
         modifiers: [
             Super,
@@ -17,13 +54,7 @@
             Super,
         ],
         key: "t",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "s",
-    ): Disable,
+    ): ToggleSticky,
     (
         modifiers: [
             Super,
@@ -31,23 +62,4 @@
         key: "z",
         description: Some("Zed"),
     ): Spawn("zed"),
-    (
-        modifiers: [
-            Super,
-            Shift,
-        ],
-        key: "t",
-    ): ToggleSticky,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "slash",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "n",
-    ): Spawn("footclient -e nvim"),
 }

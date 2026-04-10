@@ -9,7 +9,7 @@ pkgs=(
 	# woff2-font-awesome   # Iconic font designed for Bootstrap
 	# noto-fonts           # Google Noto TTF fonts
 	# noto-fonts-cjk       # Google Noto CJK fonts
-	# noto-fonts-emoji     # Google Noto Color Emoji font
+	noto-fonts-emoji # Google Noto Color Emoji font
 	# ttf-roboto           # Google's signature family of fonts
 	# ttf-roboto-mono-nerd # Patched font Roboto Mono from nerd fonts library
 	# ttf-fira-sans        # Mozilla's sans-serif typeface designed for Firefox OS

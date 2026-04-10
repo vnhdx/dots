@@ -1,0 +1,11 @@
+{
+  "modules-left": [
+    "niri/workspaces",
+    "custom/media",
+    "custom/launcher",
+    "wlr/taskbar"
+  ],
+  "modules-center": [
+    "niri/window"
+  ]
+}

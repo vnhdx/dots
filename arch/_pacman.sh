@@ -22,7 +22,7 @@ install() {
 	fi
 
 	echo "install => ${names}"
-	paru -S ${names}
+	yay -S ${names}
 
 	for cfg in "${cfgs[@]}"; do
 		cp -r ".config/${cfg}/" ~/.config/
@@ -35,5 +35,5 @@ uninstall() {
 		return
 	fi
 
-	paru -R ${names}
+	yay -Rns ${names}
 }

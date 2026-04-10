@@ -4,6 +4,9 @@
 [core]
 	autocrlf = false
 	eol = lf
+	symlinks = true
+	longpaths = true
+	fsmonitor = false
 [lfs]
 	repositoryformatversion = 0
 	locksverify = false

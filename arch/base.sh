@@ -9,7 +9,6 @@ pkgs=(
 	fastfetch # A feature-rich and performance oriented neofetch like system information tool
 	less      # A terminal based program for viewing text files
 
-	jq       # Command-line JSON processor
 	tealdeer # A fast tldr client in Rust
 
 	fish   # A package manager for the fish shell
@@ -22,13 +21,17 @@ pkgs=(
 	fcitx5-unikey     # Unikey engine support for Fcitx5
 	fcitx5-configtool # Configuration Tool for Fcitx5
 
-	# Wireless
-	iw             # nl80211 based CLI configuration utility for wireless devices
-	wireless-regdb # Central Regulatory Domain Database
+	# Network
+	networkmanager       # Network connection manager and user applications
+	nm-connection-editor # NetworkManager GUI connection editor and widgets
 
-	# Firmware
-	fwupd     # Simple daemon to allow session software to update firmware
-	fwupd-efi # EFI Application used by uefi-capsule plugin in fwupd
+	# # Wireless
+	# iw             # nl80211 based CLI configuration utility for wireless devices
+	# wireless-regdb # Central Regulatory Domain Database
+
+	# # Firmware
+	# fwupd     # Simple daemon to allow session software to update firmware
+	# fwupd-efi # EFI Application used by uefi-capsule plugin in fwupd
 
 	# Snapshot
 	snapper  # A tool for managing BTRFS and LVM snapshots

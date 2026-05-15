@@ -1,9 +1,11 @@
 // -*- mode: jsonc -*-
 // https://github.com/Alexays/Waybar/wiki/Configuration
 {
-	"include": [
-		"common.jsonc",
-		// "wlr.jsonc"
-		"niri.jsonc"
-	]
+  "include": [
+    "common.jsonc",
+    "modules.jsonc",
+    "custom_modules.jsonc",
+    // "wlr.jsonc"
+    "niri.jsonc"
+  ]
 }

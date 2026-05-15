@@ -3,19 +3,20 @@
 cwd=$(dirname "$(readlink -f "$0")")
 
 pkgs=(
-	wayfire
+	wayfire # 3D Wayland compositor, inspired by Compiz and based on wlroots
 	# wf-shell # GTK3-based panel for the Wayfire compositor
 
 	wlr-randr # Utility to manage outputs of a Wayland compositor
-	lswt      # List Wayland toplevels
+	fuzzel    # an application launcher
+	foot      # a terminal emulator wezterm, alacritty, kitty...
+	mako      # a suggested Wayland notification daemon
+	# swaync #  A simple GTK based notification daemon for Sway
 
-	fuzzel                 # an application launcher
-	foot                   # a terminal emulator wezterm, alacritty, kitty...
-	mako                   # a suggested Wayland notification daemon
-	swaybg                 # a suggested Wayland wallpaper tool
-	swaylock               # a suggested Wayland screen locker
-	swayidle               # an idle management daemon for Wayland
-	waybar                 # a suggested Wayland customizable desktop bar
+	# swaybg   # a suggested Wayland wallpaper tool
+	swaylock # a suggested Wayland screen locker
+	swayidle # an idle management daemon for Wayland
+
+	# waybar                 # a suggested Wayland customizable desktop bar
 	xdg-desktop-portal-wlr # xdg-desktop-portal backend for wlroots
 
 	# xdg-desktop-portal-gnome # a XDG desktop portal required for screencasting
@@ -32,11 +33,10 @@ pkgs=(
 	imv # Image viewer for Wayland and X11
 
 	# File namanger
-	thunar                # File manager for Xfce
-	thunar-volman         # Management of removable drives and media for Thunar
-	thunar-archive-plugin # Adds archive operations to the Thunar file context menus
-	file-roller           # Create and modify archives
-	gvfs                  # Virtual filesystem implementation for GIO
+	nemo            # File manager for Cinnamon (Nautilus fork)
+	nemo-fileroller # File archiver extension for Nemo
+	file-roller     # Create and modify archives
+	gvfs            # Virtual filesystem implementation for GIO
 
 	ly # TUI display manager
 
@@ -54,51 +54,6 @@ cfgs=(
 	gtk-3.0
 )
 
-_wayfire() {
-	# Environment
-	cat <<EOF >>~/.bash_profile
-
-# Wayland
-export MOZ_ENABLE_WAYLAND=1
-export MOZ_WAYLAND=1
-
-export QT_QPA_PLATFORM=wayland
-export ELECTRON_OZONE_PLATFORM_HINT=auto
-export OZONE_PLATFORM_HINT=auto
-# export DISPLAY=
-
-# Theme
-export GTK_THEME=Adwaita:dark
-# XCURSOR_THEME=Adwaita
-# ICON_THEME=Adwaita
-export QT_QPA_PLATFORMTHEME=qt6ct
-# QT_STYLE_OVERRIDE=GTK+
-
-export TERMINAL=footclient
-export BROWSER=firefox # firefox chromium
-export EDITOR=nvim
-
-# Fcitx
-# GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-
-# Bin
-export PATH="$HOME/.local/bin:$PATH"
-
-# Git
-# GIT_CONFIG=$HOME/.config/git/config
-
-# Go
-# GOBIN="$HOME/.local/bin"
-
-# Flutter
-export PATH="$HOME/.pub-cache/bin:$PATH"
-export CHROME_EXECUTABLE=/usr/bin/firefox
-EOF
-
-}
-
 # Display manager
 _dm() {
 	# # /etc/greetd/config.toml
@@ -109,7 +64,6 @@ _dm() {
 }
 
 post_install() {
-	_wayfire
 	_dm
 }
 

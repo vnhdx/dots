@@ -32,12 +32,10 @@ pkgs=(
 	# imv  # Image viewer for Wayland and X11
 
 	# File namanger
-	# thunar                # File manager for Xfce
-	# thunar-volman         # Management of removable drives and media for Thunar
-	# thunar-archive-plugin # Adds archive operations to the Thunar file context menus
-	nemo        # File manager for Cinnamon (Nautilus fork)
-	file-roller # Create and modify archives
-	# gvfs      # Virtual filesystem implementation for GIO
+	nemo            # File manager for Cinnamon (Nautilus fork)
+	nemo-fileroller # File archiver extension for Nemo
+	file-roller     # Create and modify archives
+	gvfs            # Virtual filesystem implementation for GIO
 
 	ly # TUI display manager
 

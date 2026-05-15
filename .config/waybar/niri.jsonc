@@ -4,8 +4,5 @@
     "custom/media",
     "custom/launcher",
     "wlr/taskbar"
-  ],
-  "modules-center": [
-    "niri/window"
   ]
 }

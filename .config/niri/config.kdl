@@ -311,6 +311,9 @@ spawn-at-startup "swayidle" "-w" "timeout" "300" "swaylock -f" "timeout" "600" "
 // Xwayland
 // spawn-at-startup "xwayland-satellite"
 
+// VNC
+spawn-at-startup "wayvnc"
+
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
     skip-at-startup

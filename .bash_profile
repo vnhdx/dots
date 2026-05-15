@@ -73,6 +73,6 @@ export CHROME_EXECUTABLE=/usr/bin/firefox
 # ------------------------------------------------------------------------------
 # Nix
 # ------------------------------------------------------------------------------
-if [ -e /home/vinh/.nix-profile/etc/profile.d/nix.sh ]; then
-  . /home/vinh/.nix-profile/etc/profile.d/nix.sh
-fi # added by Nix installer
+#if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
+#  . $HOME/.nix-profile/etc/profile.d/nix.sh
+#fi # added by Nix installer

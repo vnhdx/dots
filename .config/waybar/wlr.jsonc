@@ -1,9 +1,8 @@
 {
-	"modules-left": [
-		"wlr/workspaces",
-		"custom/media",
-		"custom/launcher",
-		"wlr/window"
-	],
-	"modules-center": ["wlr/window"]
+  "modules-left": [
+    "wlr/workspaces",
+    "custom/media",
+    "custom/launcher",
+    "wlr/window"
+  ]
 }

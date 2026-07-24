@@ -1,0 +1,80 @@
+[bar.default]
+capsule = true
+center = [ "active_window", "clock" ]
+margin_edge = 0
+margin_ends = 0
+shadow = false
+start = [ "launcher", "wallpaper", "workspaces", "taskbar" ]
+
+[desktop_widgets]
+enabled = false
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[dock]
+auto_hide = true
+enabled = true
+icon_size = 32
+launcher_position = "start"
+pinned = [ "firefox", "org.telegram.desktop", "footclient", "dev.zed.Zed" ]
+reserve_space = false
+show_dots = true
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@HDMI-A-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 1280.0
+    cy = 1321.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        input_opacity = 1.0
+        input_radius = 6.0
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_password_hint = true
+
+[shell]
+polkit_agent = true
+
+[theme]
+builtin = "Tokyo-Night"
+community_palette = "ADW"
+mode = "dark"
+wallpaper_scheme = "m3-content"
+
+[wallpaper.default]
+path = "/home/vinh/Pictures/Wallpapers/15-Sequoia-Sunrise.png"
+
+[wallpaper.last]
+path = "/home/vinh/Pictures/Wallpapers/15-Sequoia-Sunrise.png"
+
+[wallpaper.monitors.HDMI-A-1]
+path = "/home/vinh/Pictures/Wallpapers/15-Sequoia-Sunrise.png"
+
+[widget.taskbar]
+group_by_workspace = true
+hide_empty_workspaces = true

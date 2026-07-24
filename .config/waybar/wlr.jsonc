@@ -1,8 +1,8 @@
 {
   "modules-left": [
-    "wlr/workspaces",
-    "custom/media",
+    // "custom/media",
     "custom/launcher",
+    "wlr/workspaces",
     "wlr/window"
   ]
 }

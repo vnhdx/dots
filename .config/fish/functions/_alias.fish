@@ -14,8 +14,16 @@ end
 #     z $argv
 # end
 
-function p -d wl-paste
-    wl-paste $argv
+function j -d just
+    just $argv
+end
+
+# function p -d wl-paste
+#     wl-paste $argv
+# end
+
+function p -d podman
+    podman $argv
 end
 
 function f -d fastfetch
@@ -41,6 +49,10 @@ end
 function ll -d eza
     # eza --group --header --group-directories-first --long --git $argv
     eza --icons --group-directories-first --long --git $argv
+end
+
+function t -d tmux
+    tmux $argv
 end
 
 function v -d nvim

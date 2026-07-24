@@ -26,6 +26,10 @@ opencode = "latest"
 bun = "latest"
 node = "24"
 
+neovim = "latest"
+gdu = "latest"
+
+
 # Golang
 go = "latest"
 watchexec = "latest"

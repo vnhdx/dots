@@ -6,13 +6,13 @@
 // https://github.com/niri-wm/niri/blob/main/resources/default-config.kdl
 
 environment {
-	MOZ_ENABLE_WAYLAND "1"
-	MOZ_WAYLAND "1"
+	// MOZ_ENABLE_WAYLAND "1"
+	// MOZ_WAYLAND "1"
 
 	QT_QPA_PLATFORM "wayland"
 	ELECTRON_OZONE_PLATFORM_HINT "auto"
 	OZONE_PLATFORM_HINT "auto"
-	DISPLAY ":0"
+	// DISPLAY ":0"
 }
 
 // Input device configuration.
@@ -288,8 +288,9 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "waybar"
-spawn-at-startup "sh" "-c" "swaybg -i $(find $HOME/Pictures/Wallpapers/ -type f | shuf -n1)"
+// spawn-at-startup "waybar"
+spawn-at-startup "noctalia"
+// spawn-at-startup "sh" "-c" "swaybg -i $(find $HOME/Pictures/Wallpapers/ -type f | shuf -n1)"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -297,22 +298,20 @@ spawn-at-startup "sh" "-c" "swaybg -i $(find $HOME/Pictures/Wallpapers/ -type f 
 // spawn-at-startup "/usr/lib/xdg-desktop-portal-gtk"
 
 // Foot terminal emulator with server mode for better perf
-// spawn-at-startup "foot" "-s"
+spawn-at-startup "foot" "-s"
 
 // Fcitx5
-// spawn-at-startup "fcitx5" "-d"
+spawn-at-startup "fcitx5" "-d"
 
 // Auth
-spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+// spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 // Idle
-spawn-at-startup "swayidle" "-w" "timeout" "300" "swaylock -f" "timeout" "600" "niri msg dpms off" "resume" "niri msg dpms on" "before-sleep" "swaylock -f"
+// spawn-at-startup "swayidle" "-w" "timeout" "300" "swaylock -f" "timeout" "600" "niri msg dpms off" "resume" "niri msg dpms on" "before-sleep" "swaylock -f"
 
-// Xwayland
-// spawn-at-startup "xwayland-satellite"
-
-// VNC
-spawn-at-startup "wayvnc"
+// Others
+// spawn-at-startup "wayvnc"
+spawn-at-startup "Telegram" "-autostart"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
@@ -329,8 +328,8 @@ prefer-no-csd
 // You can change the path where screenshots are saved.
 // A ~ at the front will beexpanded to the home directory.
 // The path is formatted with strftime(3) to give you the screenshot date and time.
-// screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
-screenshot-path null
+screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
+// screenshot-path null
 
 // Animation settings.
 // The wiki explains how to configure individual animations:
@@ -365,7 +364,7 @@ window-rule {
 	// - Flatpak Firefox (app-id is "org.mozilla.firefox")
 	match app-id=r#"firefox$"# title="^Picture-in-Picture$"
 
-	match app-id="foot"
+	// match app-id="foot"
 	match app-id="nemo"
 	match app-id="org.pulseaudio.pavucontrol"
 	match app-id="TelegramDesktop"
@@ -397,8 +396,13 @@ window-rule {
 }
 
 // Flutter apps
+//
+// waydroid prop set persist.waydroid.width 400
+// waydroid prop set persist.waydroid.height 870
+// waydroid prop set persist.waydroid.dpi 160
 window-rule {
 	match app-id=r#"com\..*"#
+	match app-id="native" // tauri destkop app
 	match app-id="scrcpy"
 	match app-id="Waydroid"
 	default-column-width { fixed 440; }
@@ -423,19 +427,21 @@ binds {
 
 	// Suggested binds for running programs: terminal, app launcher, screen locker.
 	Mod+Return repeat=false hotkey-overlay-title="Open a Terminal" { spawn "footclient"; }
-	Mod+D hotkey-overlay-title="Run an Application" { spawn "fuzzel"; }
-	Mod+Alt+L hotkey-overlay-title="Lock the Screen" { spawn "swaylock"; }
+	// Mod+D hotkey-overlay-title="Run an Application" { spawn "fuzzel"; }
+	Mod+D hotkey-overlay-title="Run an Application" { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
+	// Mod+Alt+L hotkey-overlay-title="Lock the Screen" { spawn "swaylock"; }
+	Mod+Alt+L hotkey-overlay-title="Lock the Screen" { spawn "noctalia" "msg" "session" "lock" ; }
 
 	Mod+Shift+B repeat=false hotkey-overlay-title="Open Firefox" { spawn "firefox"; }
 	Mod+Z repeat=false hotkey-overlay-title="Open Zed" { spawn "~/.local/bin/zed"; }
-	Mod+N repeat=false hotkey-overlay-title="Open NeoVim" { spawn "neovide"; }
-	Mod+E repeat=false hotkey-overlay-title="File manager" { spawn "nemo"; }
+	Mod+N repeat=false hotkey-overlay-title="Open NeoVim" { spawn "footclient" "nvim"; }
+	Mod+Shift+E repeat=false hotkey-overlay-title="File manager" { spawn "nemo"; }
 	// Mod+Shift+B repeat=false hotkey-overlay-title="Change wallpaper" { spawn "~/.config/niri/scripts/wallpaper.sh"; }
 
 	// Mod+Shift+N repeat=false hotkey-overlay-title="Pop a notification" { spawn "makoctl" "restore"; }
 	// Mod+Shift+C repeat=false hotkey-overlay-title="Close all notifications" { spawn "makoctl" "dismiss"; }
 
-	Mod+Print repeat=false hotkey-overlay-title="Record screen" { spawn "~/.config/niri/scripts/record.sh"; }
+	// Mod+Print repeat=false hotkey-overlay-title="Record screen" { spawn "~/.config/niri/scripts/record.sh"; }
 
 	// You can also use a shell. Do this if you need pipes, multiple commands, etc.
 	// Note: the entire command goes as a single argument in the end.
@@ -455,7 +461,7 @@ binds {
 	// Open/close the Overview: a zoomed-out view of workspaces and windows.
 	// You can also move the mouse into the top-left hot corner,
 	// or do a four-finger swipe up on a touchpad.
-	Mod+O repeat=false { toggle-overview; }
+	Mod+E repeat=false { toggle-overview; }
 
 	Mod+Q { close-window; }
 
@@ -668,10 +674,12 @@ binds {
 	//
 	// The allow-inhibiting=false property can be applied to other binds as wellon,
 	// which ensures niri always processes them, even when an inhibitor is active.
-	Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+	// Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+	// Mod+Escape repeat=false hotkey-overlay-title="Power menu" { spawn "~/.config/fuzzel/bin/power.sh"; }
+	Mod+Escape repeat=false hotkey-overlay-title="Power menu" { spawn "noctalia" "msg" "panel-toggle" "session"; }
 
 	// The quit action will show a confirmation dialog to avoid accidental exits.
-	Mod+Shift+E { quit; }
+	// Mod+Shift+Q { quit; }
 	Ctrl+Alt+Delete { quit; }
 
 	// Powers off the monitors. To turn them back on, do any input like
@@ -679,5 +687,5 @@ binds {
 	Mod+Shift+P { power-off-monitors; }
 
 	// Powers on/off eDP-1
-	Mod+F12 repeat=false hotkey-overlay-title="Toogle eDP-1" { spawn "~/.config/niri/scripts/monitor.sh" ; }
+	Mod+F12 repeat=false hotkey-overlay-title="Toogle eDP-1" { spawn "~/.config/niri/scripts/monitor.sh"; }
 }
